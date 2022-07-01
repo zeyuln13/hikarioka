@@ -93,7 +93,7 @@ header > .container nav > ul > li:last-child {
 header > .container nav > ul > li > a {
   text-decoration: none;
   color: black;
-  padding: 5px 1em;
+  padding: 5px 0em;
   position: relative;
   transform: translateY(0px);
   transition: 0.3s;
@@ -115,7 +115,7 @@ header > .container nav > ul > li > a:hover::after {
   right: 0;
 }
 
-/* /////////////////////////////// */
+/* ////////////news///////////// */
 .news {
   background-color: #231815;
   width: auto;
