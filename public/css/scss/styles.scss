@@ -12,6 +12,7 @@ ol {
 
 a {
     text-decoration: none;
+    width: auto;
 }
 
 body {
@@ -75,14 +76,12 @@ header {
     max-width: auto;
 }
 
-header>.container nav {
-    margin-left: 50px;
+header>.container>nav li {
+    display: flex;
 }
 
-header>.container nav>ul {
-    display: flex;
-    margin-top: 25px;
-    margin-left: 100px;
+header>.container>.row {
+    justify-content: space-between;
 }
 
 header>.container nav>ul>li {
@@ -91,7 +90,7 @@ header>.container nav>ul>li {
     line-height: 30px;
 }
 
-header>.container nav>ul>li:last-child{
+header>.container nav>ul>li:last-child {
     margin-right: 0px;
 }
 
@@ -115,24 +114,25 @@ header>.container nav>ul>li>a {
     padding: 5px 0em;
     position: relative;
     transform: translateY(0px);
-    transition: 0.3s; 
+    transition: 0.3s;
 }
 
-header>.container nav>ul>li>a::after{
+header>.container nav>ul>li>a::after {
     content: " ";
     position: absolute;
     left: 50%;
-    right: 50%; 
+    right: 50%;
     height: 0;
-    bottom: -5px; 
+    bottom: -5px;
     border-bottom: 1px solid rgb(185, 58, 33);
-    transition:.3s; 
+    transition: .3s;
 }
 
-header>.container nav>ul>li>a:hover::after{
+header>.container nav>ul>li>a:hover::after {
     left: 0;
     right: 0;
 }
+
 /* ////////////news///////////// */
 
 .news {
@@ -184,17 +184,17 @@ div.news h2 {
 
 .simple-menu a:hover {
     background-color: black;
-    transition:background-color .3s 0s;
+    transition: background-color .3s 0s;
 }
 
-.simple-menu h3{
+.simple-menu h3 {
     display: block;
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: normal;
 }
 
-.mt{
+.mt {
     margin-top: 20px;
 }
 
@@ -222,6 +222,15 @@ footer a {
     align-items: center;
 }
 
+.container-f {
+    margin: auto;
+    width: 90%;
+    max-width: 1140px;
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
 h6 {
     display: block;
     margin: 20px;
@@ -231,6 +240,9 @@ h6 {
     color: gray;
 }
 
+
+
+
 /* ////////////迴圈///////////// */
 @for $i from 1 through 12 {
     .col-#{$i} {
@@ -238,4 +250,71 @@ h6 {
         width: calc(100% / var(--num) - 30px);
         margin: 0px 15px 40px 15px;
     }
+}
+
+@for $i from 1 through 12 {
+    .col-md-#{$i} {
+        --num: calc(12 / #{$i});
+        width: calc(100% / var(--num) - 30px);
+        margin: 0px 15px 40px 15px;
+    }
+}
+
+@for $i from 1 through 12 {
+    .col-s-#{$i} {
+        --num: calc(12 / #{$i});
+        width: calc(100% / var(--num) - 30px);
+        margin: 20px 15px 20px 15px;
+    }
+}
+
+// @for $i from 1 through 5 {
+//     .mb-#{$i} {
+//         margin-bottom: $i * 1em;
+//     }
+// }
+
+.mb {
+    margin-top: 1em;
+}
+
+@media (min-width: 768px) {
+    nav>ul {
+        display: flex;
+    }
+
+    nav>ul>li {
+        margin-right: 40px;
+        position: relative;
+        line-height: 40px;
+    }
+
+    header>.container>.row {
+        align-items: center;
+    }
+
+    .col-md-3 {
+        --num: calc(12 / 3);
+        width: calc(100% / var(--num) - 30px);
+        margin: 0px 15px 0px 15px
+    }
+
+    .col-s-12 {
+        --num: calc(12 / 12);
+        width: calc(100% / var(--num) - 30px);
+        margin: 20px 15px 20px 15px;
+    }
+}
+
+@media (max-width: 767px) {
+    .col-12 {
+    --num: calc(12 / 12);
+    width: calc(100% / var(--num) - 30px);
+    margin: 10px 15px 20px 15px;
+        }
+        
+    footer .text-center {
+    text-align: center;
+    }
+
 }

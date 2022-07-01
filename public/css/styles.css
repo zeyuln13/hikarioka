@@ -12,6 +12,7 @@ ol {
 
 a {
   text-decoration: none;
+  width: auto;
 }
 
 body {
@@ -70,14 +71,12 @@ header {
   max-width: auto;
 }
 
-header > .container nav {
-  margin-left: 50px;
+header > .container > nav li {
+  display: flex;
 }
 
-header > .container nav > ul {
-  display: flex;
-  margin-top: 25px;
-  margin-left: 100px;
+header > .container > .row {
+  justify-content: space-between;
 }
 
 header > .container nav > ul > li {
@@ -202,6 +201,15 @@ footer a {
   align-items: center;
 }
 
+.container-f {
+  margin: auto;
+  width: 90%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
+
 h6 {
   display: block;
   margin: 20px;
@@ -282,4 +290,191 @@ h6 {
   --num: calc(12 / 12);
   width: calc(100% / var(--num) - 30px);
   margin: 0px 15px 40px 15px;
+}
+
+.col-md-1 {
+  --num: calc(12 / 1);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-2 {
+  --num: calc(12 / 2);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-3 {
+  --num: calc(12 / 3);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-4 {
+  --num: calc(12 / 4);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-5 {
+  --num: calc(12 / 5);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-6 {
+  --num: calc(12 / 6);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-7 {
+  --num: calc(12 / 7);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-8 {
+  --num: calc(12 / 8);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-9 {
+  --num: calc(12 / 9);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-10 {
+  --num: calc(12 / 10);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-11 {
+  --num: calc(12 / 11);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-md-12 {
+  --num: calc(12 / 12);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 40px 15px;
+}
+
+.col-s-1 {
+  --num: calc(12 / 1);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-2 {
+  --num: calc(12 / 2);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-3 {
+  --num: calc(12 / 3);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-4 {
+  --num: calc(12 / 4);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-5 {
+  --num: calc(12 / 5);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-6 {
+  --num: calc(12 / 6);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-7 {
+  --num: calc(12 / 7);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-8 {
+  --num: calc(12 / 8);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-9 {
+  --num: calc(12 / 9);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-10 {
+  --num: calc(12 / 10);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-11 {
+  --num: calc(12 / 11);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-12 {
+  --num: calc(12 / 12);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.mb {
+  margin-top: 1em;
+}
+
+@media (min-width: 768px) {
+  nav > ul {
+    display: flex;
+  }
+
+  nav > ul > li {
+    margin-right: 40px;
+    position: relative;
+    line-height: 40px;
+  }
+
+  header > .container > .row {
+    align-items: center;
+  }
+
+  .col-md-3 {
+    --num: calc(12 / 3);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-s-12 {
+    --num: calc(12 / 12);
+    width: calc(100% / var(--num) - 30px);
+    margin: 20px 15px 20px 15px;
+  }
+}
+@media (max-width: 767px) {
+  .col-12 {
+    --num: calc(12 / 12);
+    width: calc(100% / var(--num) - 30px);
+    margin: 10px 15px 20px 15px;
+  }
+
+  footer .text-center {
+    text-align: center;
+  }
 }
