@@ -116,7 +116,7 @@ header > .container nav > ul > li > a:hover::after {
 
 /* ////////////news///////////// */
 .news {
-  background-color: #231815;
+  background-color: black;
   width: auto;
   height: 500px;
 }
@@ -124,10 +124,10 @@ header > .container nav > ul > li > a:hover::after {
 div.news h2 {
   display: block;
   color: white;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   letter-spacing: 2px;
-  font-weight: normal;
+  font-weight: bold;
 }
 
 /* ////////////simple-menu///////////// */
@@ -151,7 +151,7 @@ div.news h2 {
   color: white;
   text-decoration: none;
   box-sizing: border-box;
-  background-color: #b93a21;
+  background-color: #4a855e;
   width: 80px;
   height: 40px;
   text-align: center;
@@ -173,10 +173,6 @@ div.news h2 {
   font-weight: normal;
 }
 
-.mt {
-  margin-top: 20px;
-}
-
 /* ////////////footer///////////// */
 footer {
   height: 200px;
@@ -195,6 +191,14 @@ footer a {
 .container-extra {
   margin: auto;
   width: 90%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container-extra {
+  margin-top: 20px;
   max-width: 1140px;
   display: flex;
   justify-content: center;
@@ -223,145 +227,73 @@ h6 {
 .col-1 {
   --num: calc(12 / 1);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-2 {
   --num: calc(12 / 2);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-3 {
   --num: calc(12 / 3);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-4 {
   --num: calc(12 / 4);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-5 {
   --num: calc(12 / 5);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-6 {
   --num: calc(12 / 6);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-7 {
   --num: calc(12 / 7);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-8 {
   --num: calc(12 / 8);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-9 {
   --num: calc(12 / 9);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-10 {
   --num: calc(12 / 10);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-11 {
   --num: calc(12 / 11);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-12 {
   --num: calc(12 / 12);
   width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-1 {
-  --num: calc(12 / 1);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-2 {
-  --num: calc(12 / 2);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-3 {
-  --num: calc(12 / 3);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-4 {
-  --num: calc(12 / 4);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-5 {
-  --num: calc(12 / 5);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-6 {
-  --num: calc(12 / 6);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-7 {
-  --num: calc(12 / 7);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-8 {
-  --num: calc(12 / 8);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-9 {
-  --num: calc(12 / 9);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-10 {
-  --num: calc(12 / 10);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-11 {
-  --num: calc(12 / 11);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
-}
-
-.col-md-12 {
-  --num: calc(12 / 12);
-  width: calc(100% / var(--num) - 30px);
-  margin: 0px 15px 40px 15px;
+  margin: 0px 15px 0px 15px;
 }
 
 .col-s-1 {
@@ -436,10 +368,187 @@ h6 {
   margin: 20px 15px 20px 15px;
 }
 
-.mb {
-  margin-top: 1em;
-}
+@media (min-width: 768px) {
+  .col-md-1 {
+    --num: calc(12 / 1);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
 
+  .col-md-2 {
+    --num: calc(12 / 2);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-3 {
+    --num: calc(12 / 3);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-4 {
+    --num: calc(12 / 4);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-5 {
+    --num: calc(12 / 5);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-6 {
+    --num: calc(12 / 6);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-7 {
+    --num: calc(12 / 7);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-8 {
+    --num: calc(12 / 8);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-9 {
+    --num: calc(12 / 9);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-10 {
+    --num: calc(12 / 10);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-11 {
+    --num: calc(12 / 11);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-12 {
+    --num: calc(12 / 12);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .simple-menu {
+    background-color: #F0F0F0;
+    /* background-image: url(public/images/gray-01.png); */
+    width: auto;
+    height: 700px;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-1 {
+    --num: calc(12 / 1);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-2 {
+    --num: calc(12 / 2);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-3 {
+    --num: calc(12 / 3);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-4 {
+    --num: calc(12 / 4);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-5 {
+    --num: calc(12 / 5);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-6 {
+    --num: calc(12 / 6);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-7 {
+    --num: calc(12 / 7);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-8 {
+    --num: calc(12 / 8);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-9 {
+    --num: calc(12 / 9);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-10 {
+    --num: calc(12 / 10);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-11 {
+    --num: calc(12 / 11);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-12 {
+    --num: calc(12 / 12);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+}
+@media (max-width: 767px) {
+  .simple-menu {
+    background-color: #F0F0F0;
+    /* background-image: url(public/images/gray-01.png); */
+    width: auto;
+    height: auto;
+  }
+
+  footer .text-center {
+    text-align: center;
+  }
+
+  .simple-menu h3 {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: normal;
+  }
+
+  .btn-container-extra {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
 @media (min-width: 768px) {
   nav > ul {
     display: flex;
@@ -465,16 +574,5 @@ h6 {
     --num: calc(12 / 12);
     width: calc(100% / var(--num) - 30px);
     margin: 20px 15px 20px 15px;
-  }
-}
-@media (max-width: 767px) {
-  .col-12 {
-    --num: calc(12 / 12);
-    width: calc(100% / var(--num) - 30px);
-    margin: 10px 15px 20px 15px;
-  }
-
-  footer .text-center {
-    text-align: center;
   }
 }

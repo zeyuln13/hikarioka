@@ -15,21 +15,18 @@ head
     .banner {
     background-image: url(public/images/index_banner_01.jpg);
     background-size: 100%;
-    padding-bottom: 42%;
-    background-attachment: fixed;
+    padding-bottom: 43.48%;
+    //- background-attachment: fixed;
     /* background-repeat: no-repeat; */
     }
-    .simple-menu {
-    background-color: #F0F0F0;
-    /* background-image: url(public/images/gray-01.png); */
-    width: auto;
-    height: 700px;
-    }
+
 header
   .container
     .row
       a(href='index.html')
-        img.tittle-logo(src='public/images/hioka.png' alt='cmyk' width='500px' height='85px')
+        img.tittle-logo(src='public/images/logo/fullogo.png' alt='曜丘' width='500px' height='85px')
+      a#btn-nav-switch.icon-menu.display-md-none(href="javascript:;") 
+        img(src="public/images/logo.svg", width="100%", alt="")
       nav
         ul
           li
@@ -46,27 +43,27 @@ header
             a(href='06-contact.html') 聯絡我們
 .banner
 .news
-  h2.text-center 人氣消息
+  h2.text-center ｜&emsp;人氣消息&emsp;｜
 .simple-menu
   .container
-    h2.text-center 美味佳餚
-    .row.mt
-      .col-4
+    h2.text-center ｜&emsp;美味佳餚&emsp;｜
+    .row
+      .col-md-4.col-12
         img.img-fluid(src='public/images/edit/nippon_curry-01.png' alt='和風咖哩飯')
         h3.text-center 和風咖哩飯
-      .col-4
+      .col-md-4.col-12
         img.img-fluid(src='public/images/edit/octsalad-01.png' alt='芹菜章魚沙拉')
         h3.text-center 芹菜章魚沙拉
-      .col-4
+      .col-md-4.col-12
         img.img-fluid(src='public/images/edit/mentaiko-01.png' alt='明太子義大利麵')
         h3.text-center 明太子義大利麵
-    .container-extra
+    .btn-container-extra
       a(href='03-menu.html') 更多美味
 footer 
   .container
     .row
         a.col-s-12.container-extra(href='index.html')
-         img.tittle-logo(src='public/images/hioka.png' alt='cmyk' width='500px' height='85px')
+         img.tittle-logo(src='public/images/logo/fullogo.png' alt='cmyk' width='500px' height='85px')
         a.col-s-6.container-f(href='index.html')
           img(src="public/images/iconmonstr-facebook-3.svg", alt="Facebook")
         a.col-s-6(href='index.html')

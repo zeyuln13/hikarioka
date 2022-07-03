@@ -136,18 +136,18 @@ header>.container nav>ul>li>a:hover::after {
 /* ////////////news///////////// */
 
 .news {
-    background-color: rgb(35, 24, 21);
+    background-color: black;
     width: auto;
     height: 500px;
 }
 
 div.news h2 {
     display: block;
-    color: white;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    color: rgb(255, 255, 255);
+    padding-top: 30px;
+    padding-bottom: 30px;
     letter-spacing: 2px;
-    font-weight: normal;
+    font-weight: bold;
 }
 
 /* ////////////simple-menu///////////// */
@@ -172,7 +172,7 @@ div.news h2 {
     color: rgb(255, 255, 255);
     text-decoration: none;
     box-sizing: border-box;
-    background-color: rgb(185, 58, 33);
+    background-color: rgb(74, 133, 94);
     width: 80px;
     height: 40px;
     text-align: center;
@@ -194,9 +194,6 @@ div.news h2 {
     font-weight: normal;
 }
 
-.mt {
-    margin-top: 20px;
-}
 
 /* ////////////footer///////////// */
 footer {
@@ -222,6 +219,15 @@ footer a {
     align-items: center;
 }
 
+.btn-container-extra {
+    margin-top: 20px;
+    // width: 90%;
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .container-f {
     margin: auto;
     width: 90%;
@@ -240,23 +246,12 @@ h6 {
     color: gray;
 }
 
-
-
-
 /* ////////////迴圈///////////// */
 @for $i from 1 through 12 {
     .col-#{$i} {
         --num: calc(12 / #{$i});
         width: calc(100% / var(--num) - 30px);
-        margin: 0px 15px 40px 15px;
-    }
-}
-
-@for $i from 1 through 12 {
-    .col-md-#{$i} {
-        --num: calc(12 / #{$i});
-        width: calc(100% / var(--num) - 30px);
-        margin: 0px 15px 40px 15px;
+        margin: 0px 15px 0px 15px;
     }
 }
 
@@ -268,15 +263,67 @@ h6 {
     }
 }
 
-// @for $i from 1 through 5 {
-//     .mb-#{$i} {
-//         margin-bottom: $i * 1em;
-//     }
-// }
+@media (min-width:768px) {
+    @for $i from 1 through 12 {
+        .col-md-#{$i} {
+            --num: calc(12 / #{$i});
+            width: calc(100% / var(--num) - 30px);
+            margin: 0px 15px 0px 15px;
+        }
+    }
 
-.mb {
-    margin-top: 1em;
+    .simple-menu {
+        background-color: #F0F0F0;
+        /* background-image: url(public/images/gray-01.png); */
+        width: auto;
+        height: 700px;
+    }
+
+
 }
+
+@media (min-width:1200px) {
+    @for $i from 1 through 12 {
+        .col-lg-#{$i} {
+            --num: calc(12 / #{$i});
+            width: calc(100% / var(--num) - 30px);
+            margin: 0px 15px 0px 15px;
+        }
+    }
+}
+
+// 1200px end
+
+@media(max-width:767px){
+    .simple-menu {
+        background-color: #F0F0F0;
+        /* background-image: url(public/images/gray-01.png); */
+        width: auto;
+        height: auto;
+    }
+
+    footer .text-center {
+        text-align: center;
+    }
+
+    .simple-menu h3 {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-weight: normal;
+    }
+
+    .btn-container-extra {
+        margin-top: 5px;
+        margin-bottom: 25px;
+        // width: 90%;
+        max-width: 1140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
 
 @media (min-width: 768px) {
     nav>ul {
@@ -304,17 +351,4 @@ h6 {
         width: calc(100% / var(--num) - 30px);
         margin: 20px 15px 20px 15px;
     }
-}
-
-@media (max-width: 767px) {
-    .col-12 {
-    --num: calc(12 / 12);
-    width: calc(100% / var(--num) - 30px);
-    margin: 10px 15px 20px 15px;
-        }
-        
-    footer .text-center {
-    text-align: center;
-    }
-
 }
