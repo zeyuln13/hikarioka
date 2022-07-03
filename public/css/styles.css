@@ -522,6 +522,13 @@ h6 {
   }
 }
 @media (max-width: 767px) {
+  .icon-menu {
+    background-color: lightgray;
+    width: 80px;
+    height: 85px;
+    display: none;
+  }
+
   .simple-menu {
     background-color: #F0F0F0;
     /* background-image: url(public/images/gray-01.png); */
@@ -547,6 +554,20 @@ h6 {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  header > .container .nav-p {
+    display: block;
+    width: 120%;
+    position: absolute;
+    top: 84px;
+    left: -30px;
+    background-color: #4a855e;
+    border-bottom: 2px solid #40006a;
+  }
+
+  header > .container .nav-c {
+    display: none;
   }
 }
 @media (min-width: 768px) {

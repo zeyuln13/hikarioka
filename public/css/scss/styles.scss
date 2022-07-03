@@ -133,6 +133,7 @@ header>.container nav>ul>li>a:hover::after {
     right: 0;
 }
 
+
 /* ////////////news///////////// */
 
 .news {
@@ -279,7 +280,6 @@ h6 {
         height: 700px;
     }
 
-
 }
 
 @media (min-width:1200px) {
@@ -294,7 +294,47 @@ h6 {
 
 // 1200px end
 
-@media(max-width:767px){
+@media(max-width:767px) {
+    // header>.container>.row{
+    //     align-items: center;
+    // }
+
+    // header{
+    //     position: relative;
+
+    // }
+
+    // nav{
+    //     position: absolute;
+    //     width: 100%;
+    //     top:76px;
+    //     left:0;
+    //     display: none;
+    // }
+
+    // nav.active{
+    //     display: block;
+    // }
+
+    // nav li{
+
+    //     line-height: 60px;
+    // }
+    // nav a{
+    //     display: block;
+    //     text-align: center;
+    //     background-color: rgb(255, 229, 204);
+    //     color:red;
+    // }
+
+    .icon-menu {
+        background-color: lightgray;
+        width: 80px;
+        height: 85px;
+        display: none;
+        // background-image: url('../images/logo.svg');
+    }
+
     .simple-menu {
         background-color: #F0F0F0;
         /* background-image: url(public/images/gray-01.png); */
@@ -320,11 +360,73 @@ h6 {
         max-width: 1140px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: center
     }
+
+    header>.container .nav-p {
+        display: block;
+        width: 120%;
+        position: absolute;
+        top: 84px;
+        left: -30px;
+        background-color: rgb(74, 133, 94);
+        border-bottom: 2px solid rgb(64, 0, 106);
+        // display: none;
+        // 需要蓋板的話打開以下程式碼
+        // position: fixed;
+        // top: 0px;
+        // height: 100vh;
+        // z-index: 100;
+    }
+
+    // header>.container .nav-p {
+    //     display: block;
+    //     width: 120%;
+    //     position: absolute;
+    //     top: 84px;
+    //     left: -30px;
+    //     background-color: rgb(74, 133, 94);
+    //     border-bottom: 2px solid rgb(64, 0, 106);
+    //     // display: none;
+    //     // 需要蓋板的話打開以下程式碼
+    //     // position: fixed;
+    //     // top: 0px;
+    //     // height: 100vh;
+    //     // z-index: 100;
+    // }
+
+    header>.container .nav-c {
+        display: none;
+    }
+
+    // nav.active {
+    // left: 0px;
+
+    // // 需要從上往下出現導覽時打開以下程式碼
+    // // height: 244px;
+    // }
+
+    // header>.container nav.active {
+    // display: block;
+    // }
+
+    // header>.container nav>ul {
+    // display: block;
+    // }
+
+    // header>.container nav>ul>li {
+    // text-align: center;
+    // width: 100%;
+    // border-bottom: 1px solid rgb(185, 58, 33);
+    // }
+
+    // header>.container nav>ul>li>a {
+    // display: block;
+    // }
 }
 
 
+// 
 @media (min-width: 768px) {
     nav>ul {
         display: flex;

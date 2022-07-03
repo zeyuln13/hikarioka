@@ -16,8 +16,6 @@ head
     background-image: url(public/images/index_banner_01.jpg);
     background-size: 100%;
     padding-bottom: 43.9%;
-    //- background-attachment: fixed;
-    /* background-repeat: no-repeat; */
     }
 
 header
@@ -25,9 +23,7 @@ header
     .row
       a(href='index.html')
         img.tittle-logo(src='public/images/logo/fullogo.png' alt='曜丘' width='500px' height='85px')
-      a#btn-nav-switch.icon-menu.display-md-none(href="javascript:;") 
-        img(src="public/images/logo.svg", width="100%", alt="")
-      nav
+      nav.icon-menu
         ul
           li
             a(href='01-about.html') 關於我們
@@ -74,3 +70,8 @@ footer
             .col-12.col-md-3.text-center 服務時間：09：00-18：00
             .col-12.col-md-3.text-center 台中市西區美村路一段187號4樓
             h6.col-12.col-s-12.text-center Copyright© 2022 HIKARIOKA Design by ZHEYOULIN
+
+script(src="https://code.jquery.com/jquery-3.6.0.min.js",integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=",crossorigin="anonymous")
+script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js")
+        
+script(src="public/js/hikarioka-script.js")
