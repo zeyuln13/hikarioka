@@ -15,22 +15,52 @@
             src: url(Iansui094-Regular.woff);
         }
 
-        .banner {
-            background-image: url(public/images/index_banner_01.jpg);
-            background-size: 100%;
-            padding-bottom: 43.9%;
-            position: relative;
-            /* z-index: 1; */
+        @media (min-width:768px) {
+            .page-banner {
+                background-image: url(public/images/vege.jpg);
+                background-size: 100%;
+                padding-bottom: 27.4%;
+                position: relative;
+                /* z-index: 1; */
+            }
+
+            .banner-text {
+                position: absolute;
+                margin: auto;
+                width: 90%;
+                max-width: 18%;
+                /* justify-content: center; */
+                top: 170px;
+                left: 620px;
+                text-align: center;
+                font-size: 50px;
+                color: white;
+            }
         }
 
-        .beau {
-            position: absolute;
-            margin: auto;
-            width: 90%;
-            max-width: 18%;
-            justify-content: center;
-            top: 30px;
-            left: 634px;
+        @media (max-width:767px) {
+            .page-banner {
+                background-image: url(public/images/vege.jpg);
+                background-size: 100%;
+                padding-bottom: 30%;
+                position: relative;
+                background-size: cover;
+            }
+
+            .banner-text {
+                position: absolute;
+                margin: auto;
+                width: 90%;
+                margin: auto;
+                width: 90%;
+                font-size: 35px;
+                color: white;
+                /* top: 20px; */
+                /* justify-content: center;
+                text-align: center; */
+                top: 55px;
+                left: 200px;
+            }
         }
     </style>
 </head>
@@ -39,12 +69,12 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <a href="#" class="nav-branding">
+                <a href="index.html" class="nav-branding">
                     <img class="tittle-logo" src="public/images/logo/fullogo.png" alt="曜丘" width="500px" height="85px">
                 </a>
                 <ul class="nav-menu">
                     <li class="nav-item">
-                        <a href="about.html" class="nav-link">關於我們</a>
+                        <a href="01-about.html" class="nav-link">關於我們</a>
                     </li>
                     <li class="nav-item">
                         <a href="02-news.html" class="nav-link">最新消息</a>
@@ -71,15 +101,27 @@
         </div>
     </header>
 
-    <div class="banner">
-        <img class="beau t3" src="public/images/beau1.png">
+    <div class="page-banner ">
+        <span class="banner-text">關於我們</span>
     </div>
 
-    <div class="news">
-        <h2 class="text-center">｜&emsp;人氣消息&emsp;｜</h2>
-    </div>
 
-    <div class="simple-menu">
+    <div class="intro">
+        <div class="container">
+            <div class="row container-extra">
+                <div class="col-md-6 col-12 mt-3 mb-2 container-extra">
+                    <img src="public/images/intro.png">
+                </div>
+                <div class="col-md-6 col-12">
+                    <p>曜丘 家庭食堂，創始於2022年的台灣台中，「曜」本意日光、「丘」本意小山，曜丘想傳達品嘗美食的自然之美，如同日光灑落在山丘上沐浴大地。<br>
+                        <br>
+                        我們的菜單設計也希望提供給每一位顧客如同家的溫暖與感受，料鮮的家常菜、舒適的環境、到位的服務、不過分介入客人享受用餐的時光，輕鬆自在地品嘗。我們不說只說嚴選食材，我們驕傲清楚地標示親自挑選的每樣食材，從台灣本地肉品、產銷履歷的蔬菜，到日本進口的食材，端上桌的每份餐點品質把關都對得起消費者，安心滿意穩定、質樸中庸的曜丘，城市中您的美食綠丘。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="simple-menu">
         <div class="container">
             <h2 class="text-center">｜&emsp;美味佳餚&emsp;｜</h2>
             <div class="row">
@@ -98,7 +140,7 @@
             </div>
             <div class="btn-container-extra"><a href="03-menu.html">更多美味</a></div>
         </div>
-    </div>
+    </div> -->
 
     <footer>
         <div class="container">

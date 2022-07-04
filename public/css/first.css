@@ -13,6 +13,7 @@ ol {
 a {
   text-decoration: none;
   width: auto;
+  /* color: rgb(64, 61, 61); */
 }
 
 body {
@@ -26,6 +27,7 @@ body {
 }
 
 .row {
+  /* // margin: auto; */
   display: flex;
   flex-wrap: wrap;
   /*換行*/
@@ -35,6 +37,7 @@ body {
   justify-content: space-between;
 }
 
+/* // 圖形 */
 .img-fluid {
   width: 100%;
 }
@@ -43,6 +46,7 @@ body {
   border-radius: 8px;
 }
 
+/* // 文字 */
 .text-center {
   text-align: center;
 }
@@ -59,7 +63,19 @@ body {
   text-align: justify;
 }
 
-/* ////////////header///////////// */
+/* header start */
+@keyframes t3 {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.t3 {
+  animation: t3 7s infinite alternate;
+}
+
 .tittle-logo {
   width: auto;
 }
@@ -71,24 +87,13 @@ header {
   max-width: auto;
 }
 
-header > .container > nav li {
+/* header>.container>nav li {
   display: flex;
 }
 
-header > .container > .row {
+header>.container>.row {
   justify-content: space-between;
-}
-
-header > .container nav > ul > li {
-  margin-right: 20px;
-  text-align: center;
-  line-height: 30px;
-}
-
-header > .container nav > ul > li:last-child {
-  margin-right: 0px;
-}
-
+} */
 header > .container nav > ul > li > a {
   text-decoration: none;
   color: black;
@@ -114,6 +119,95 @@ header > .container nav > ul > li > a:hover::after {
   right: 0;
 }
 
+.navbar {
+  /* height: 70px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+/* .nav-branding{
+  font-size: 2em;
+} */
+/* .nav-link{
+ transition: 0.7s ease;
+}
+
+.nav-link:hover{
+color: darkgreen;
+} */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+  border-radius: 100px;
+}
+
+/* 手機裝置 */
+@media (max-width: 767px) {
+  header {
+    z-index: 1;
+    position: relative;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .navbar {
+    position: relative;
+  }
+
+  .nav-menu {
+    position: fixed;
+    left: -120%;
+    top: 85px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #f0f0f0;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    position: absolute;
+  }
+
+  .nav-item {
+    margin: 16px 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+  }
+}
 /* ////////////news///////////// */
 .news {
   background-color: black;
@@ -199,6 +293,7 @@ footer a {
 
 .btn-container-extra {
   margin-top: 20px;
+  /* // width: 90%; */
   max-width: 1140px;
   display: flex;
   justify-content: center;
@@ -220,7 +315,7 @@ h6 {
   text-align: center;
   letter-spacing: 0em;
   font-weight: lighter;
-  color: gray;
+  color: lightgray;
 }
 
 /* ////////////迴圈///////////// */
@@ -522,11 +617,9 @@ h6 {
   }
 }
 @media (max-width: 767px) {
-  .icon-menu {
-    background-color: lightgray;
-    width: 80px;
-    height: 85px;
-    display: none;
+  .container {
+    margin: auto;
+    max-width: 1140px;
   }
 
   .simple-menu {
@@ -534,6 +627,13 @@ h6 {
     /* background-image: url(public/images/gray-01.png); */
     width: auto;
     height: auto;
+  }
+
+  .intro {
+    background-color: #F0F0F0;
+    /* background-image: url(public/images/gray-01.png); */
+    width: auto;
+    height: 750px;
   }
 
   footer .text-center {
@@ -556,44 +656,30 @@ h6 {
     align-items: center;
   }
 
-  header > .container .nav-p {
-    display: block;
-    width: 120%;
-    position: absolute;
-    top: 84px;
-    left: -30px;
-    background-color: #4a855e;
-    border-bottom: 2px solid #40006a;
+  .mb-2 {
+    margin-bottom: 10px;
   }
 
-  header > .container .nav-c {
-    display: none;
+  .mb-4 {
+    margin-bottom: 40px;
+  }
+
+  .mt-3 {
+    margin-top: 30px;
+  }
+
+  .banner {
+    background-size: cover;
   }
 }
 @media (min-width: 768px) {
-  nav > ul {
+  .intro {
+    background-color: #f0f0f0;
+    width: auto;
+    height: 500px;
     display: flex;
   }
-
-  nav > ul > li {
-    margin-right: 40px;
-    position: relative;
-    line-height: 40px;
-  }
-
-  header > .container > .row {
-    align-items: center;
-  }
-
-  .col-md-3 {
-    --num: calc(12 / 3);
-    width: calc(100% / var(--num) - 30px);
-    margin: 0px 15px 0px 15px;
-  }
-
-  .col-s-12 {
-    --num: calc(12 / 12);
-    width: calc(100% / var(--num) - 30px);
-    margin: 20px 15px 20px 15px;
-  }
+}
+.intro p {
+  line-height: 2;
 }

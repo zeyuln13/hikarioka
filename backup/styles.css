@@ -1,0 +1,573 @@
+@charset "UTF-8";
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  /*換行*/
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+.img-rounded {
+  border-radius: 8px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
+/* ////////////header///////////// */
+.tittle-logo {
+  width: auto;
+}
+
+header {
+  background-color: white;
+  display: block;
+  height: 85px;
+  max-width: auto;
+}
+
+header > .container > nav li {
+  display: flex;
+}
+
+header > .container > .row {
+  justify-content: space-between;
+}
+
+header > .container nav > ul > li {
+  margin-right: 20px;
+  text-align: center;
+  line-height: 30px;
+}
+
+header > .container nav > ul > li:last-child {
+  margin-right: 0px;
+}
+
+header > .container nav > ul > li > a {
+  text-decoration: none;
+  color: black;
+  padding: 5px 0em;
+  position: relative;
+  transform: translateY(0px);
+  transition: 0.3s;
+}
+
+header > .container nav > ul > li > a::after {
+  content: " ";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  height: 0;
+  bottom: -5px;
+  border-bottom: 1px solid #b93a21;
+  transition: 0.3s;
+}
+
+header > .container nav > ul > li > a:hover::after {
+  left: 0;
+  right: 0;
+}
+
+/* ////////////news///////////// */
+.news {
+  background-color: black;
+  width: auto;
+  height: 500px;
+}
+
+div.news h2 {
+  display: block;
+  color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* ////////////simple-menu///////////// */
+.simple-menu {
+  height: 500px;
+  display: flex;
+  width: auto;
+}
+
+.simple-menu h2 {
+  display: block;
+  color: black;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.simple-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  box-sizing: border-box;
+  background-color: #4a855e;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.simple-menu a:hover {
+  background-color: black;
+  transition: background-color 0.3s 0s;
+}
+
+.simple-menu h3 {
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+/* ////////////footer///////////// */
+footer {
+  height: 200px;
+  width: auto;
+}
+
+.footer-info {
+  padding-left: 100px;
+}
+
+footer a {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.container-extra {
+  margin: auto;
+  width: 90%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-container-extra {
+  margin-top: 20px;
+  max-width: 1140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-f {
+  margin: auto;
+  width: 90%;
+  max-width: 1140px;
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+h6 {
+  display: block;
+  margin: 20px;
+  text-align: center;
+  letter-spacing: 0em;
+  font-weight: lighter;
+  color: gray;
+}
+
+/* ////////////迴圈///////////// */
+.col-1 {
+  --num: calc(12 / 1);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-2 {
+  --num: calc(12 / 2);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-3 {
+  --num: calc(12 / 3);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-4 {
+  --num: calc(12 / 4);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-5 {
+  --num: calc(12 / 5);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-6 {
+  --num: calc(12 / 6);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-7 {
+  --num: calc(12 / 7);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-8 {
+  --num: calc(12 / 8);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-9 {
+  --num: calc(12 / 9);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-10 {
+  --num: calc(12 / 10);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-11 {
+  --num: calc(12 / 11);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-12 {
+  --num: calc(12 / 12);
+  width: calc(100% / var(--num) - 30px);
+  margin: 0px 15px 0px 15px;
+}
+
+.col-s-1 {
+  --num: calc(12 / 1);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-2 {
+  --num: calc(12 / 2);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-3 {
+  --num: calc(12 / 3);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-4 {
+  --num: calc(12 / 4);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-5 {
+  --num: calc(12 / 5);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-6 {
+  --num: calc(12 / 6);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-7 {
+  --num: calc(12 / 7);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-8 {
+  --num: calc(12 / 8);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-9 {
+  --num: calc(12 / 9);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-10 {
+  --num: calc(12 / 10);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-11 {
+  --num: calc(12 / 11);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+.col-s-12 {
+  --num: calc(12 / 12);
+  width: calc(100% / var(--num) - 30px);
+  margin: 20px 15px 20px 15px;
+}
+
+@media (min-width: 768px) {
+  .col-md-1 {
+    --num: calc(12 / 1);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-2 {
+    --num: calc(12 / 2);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-3 {
+    --num: calc(12 / 3);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-4 {
+    --num: calc(12 / 4);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-5 {
+    --num: calc(12 / 5);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-6 {
+    --num: calc(12 / 6);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-7 {
+    --num: calc(12 / 7);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-8 {
+    --num: calc(12 / 8);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-9 {
+    --num: calc(12 / 9);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-10 {
+    --num: calc(12 / 10);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-11 {
+    --num: calc(12 / 11);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-md-12 {
+    --num: calc(12 / 12);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .simple-menu {
+    background-color: #F0F0F0;
+    /* background-image: url(public/images/gray-01.png); */
+    width: auto;
+    height: 700px;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-1 {
+    --num: calc(12 / 1);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-2 {
+    --num: calc(12 / 2);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-3 {
+    --num: calc(12 / 3);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-4 {
+    --num: calc(12 / 4);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-5 {
+    --num: calc(12 / 5);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-6 {
+    --num: calc(12 / 6);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-7 {
+    --num: calc(12 / 7);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-8 {
+    --num: calc(12 / 8);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-9 {
+    --num: calc(12 / 9);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-10 {
+    --num: calc(12 / 10);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-11 {
+    --num: calc(12 / 11);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-lg-12 {
+    --num: calc(12 / 12);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+}
+@media (max-width: 767px) {
+  .icon-menu {
+    background-color: lightgray;
+    width: 80px;
+    height: 85px;
+    display: none;
+  }
+
+  .simple-menu {
+    background-color: #F0F0F0;
+    /* background-image: url(public/images/gray-01.png); */
+    width: auto;
+    height: auto;
+  }
+
+  footer .text-center {
+    text-align: center;
+  }
+
+  .simple-menu h3 {
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-weight: normal;
+  }
+
+  .btn-container-extra {
+    margin-top: 5px;
+    margin-bottom: 25px;
+    max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  header > .container .nav-p {
+    display: block;
+    width: 120%;
+    position: absolute;
+    top: 84px;
+    left: -30px;
+    background-color: #4a855e;
+    border-bottom: 2px solid #40006a;
+  }
+
+  header > .container .nav-c {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  nav > ul {
+    display: flex;
+  }
+
+  nav > ul > li {
+    margin-right: 40px;
+    position: relative;
+    line-height: 40px;
+  }
+
+  header > .container > .row {
+    align-items: center;
+  }
+
+  .col-md-3 {
+    --num: calc(12 / 3);
+    width: calc(100% / var(--num) - 30px);
+    margin: 0px 15px 0px 15px;
+  }
+
+  .col-s-12 {
+    --num: calc(12 / 12);
+    width: calc(100% / var(--num) - 30px);
+    margin: 20px 15px 20px 15px;
+  }
+}
