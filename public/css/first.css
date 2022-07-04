@@ -619,6 +619,12 @@ h6 {
   }
 }
 @media (max-width: 767px) {
+  .container {
+    margin: auto;
+    width: 100%;
+    max-width: 1140px;
+  }
+
   .simple-menu {
     background-color: #F0F0F0;
     /* background-image: url(public/images/gray-01.png); */
@@ -630,7 +636,7 @@ h6 {
     background-color: #F0F0F0;
     /* background-image: url(public/images/gray-01.png); */
     width: auto;
-    height: 870px;
+    height: auto;
   }
 
   footer .text-center {
@@ -667,6 +673,10 @@ h6 {
 
   .banner {
     background-size: cover;
+  }
+
+  .intro p {
+    margin-bottom: 30px;
   }
 }
 @media (min-width: 768px) {
