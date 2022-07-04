@@ -619,11 +619,6 @@ h6 {
   }
 }
 @media (max-width: 767px) {
-  .container {
-    margin: auto;
-    max-width: 1140px;
-  }
-
   .simple-menu {
     background-color: #F0F0F0;
     /* background-image: url(public/images/gray-01.png); */
