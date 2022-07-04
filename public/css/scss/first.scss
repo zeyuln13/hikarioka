@@ -20,6 +20,8 @@ a {
 
 body {
     margin: 0;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 .container {
@@ -412,7 +414,7 @@ h6 {
         background-color: #F0F0F0;
         /* background-image: url(public/images/gray-01.png); */
         width: auto;
-        height: 750px;
+        height: 870px;
     }
 
     footer .text-center {
