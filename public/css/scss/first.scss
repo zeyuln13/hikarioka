@@ -30,6 +30,12 @@ body {
     max-width: 1140px;
 }
 
+@media(max-width:767px) {
+    .container {
+        width: 100%;
+    }
+}
+
 .row {
     /* // margin: auto; */
     display: flex;
@@ -102,24 +108,6 @@ header {
     max-width: auto;
 }
 
-/* header>.container>nav li {
-  display: flex;
-}
-
-header>.container>.row {
-  justify-content: space-between;
-} */
-
-// header>.container nav>ul>li {
-//   margin-right: 20px;
-//   text-align: center;
-//   line-height: 30px;
-// }
-
-// header>.container nav>ul>li:last-child {
-//   margin-right: 0px;
-// } *
-
 header>.container nav>ul>li>a {
     text-decoration: none;
     color: rgb(0, 0, 0);
@@ -154,18 +142,18 @@ header>.container nav>ul>li>a:hover::after {
 }
 
 .navbar>a {
-  padding-left:0px;
-} *
+    padding-left: 0px;
+}
 
-.nav-menu {
+* .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
 }
 
-.navbar>.hamburger{
-    padding-right:20px;
+.navbar>.hamburger {
+    padding-right: 20px;
 }
 
 /* .nav-branding{
@@ -196,9 +184,28 @@ color: darkgreen;
     border-radius: 100px;
 }
 
+/* header>.container>nav li {
+  display: flex;
+}
+
+header>.container>.row {
+  justify-content: space-between;
+} */
+
+// header>.container nav>ul>li {
+//   margin-right: 20px;
+//   text-align: center;
+//   line-height: 30px;
+// }
+
+// header>.container nav>ul>li:last-child {
+//   margin-right: 0px;
+// } *
+
 /* 手機裝置 */
 
 @media (max-width:767px) {
+
     // header
     header {
         z-index: 1;
@@ -247,14 +254,15 @@ color: darkgreen;
     }
 }
 
+/* ////////////bread///////////// */
 // 麵包屑
-.bread-crumb{
+.bread-crumb {
     width: auto;
     height: auto;
     background-color: #f0f0f0;
 }
 
-.bread-crumb h5{
+.bread-crumb h5 {
     font-weight: lighter;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -278,10 +286,11 @@ div.news h2 {
     font-weight: bold;
 }
 
-/* ////////////simple-menu///////////// */
+/* ////////////simple-menu/////////////*/
 
 .simple-menu {
-    height: 500px;
+    background-color: #F0F0F0;
+    height: 600px;
     display: flex;
     width: auto;
 }
@@ -322,6 +331,36 @@ div.news h2 {
     font-weight: normal;
 }
 
+.btn-container-extra {
+    margin-top: 20px;
+    /* // width: 90%; */
+    // max-width: 1140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:767px) {
+    .simple-menu {
+        background-color: #F0F0F0;
+        /* background-image: url(public/images/gray-01.png); */
+        width: auto;
+        height: auto;
+    }
+
+    .simple-menu h3 {
+        display: block;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-weight: normal;
+    }
+
+    .btn-container-extra {
+        margin-top: 5px;
+        margin-bottom: 25px;
+    }
+}
+
 /* ////////////footer///////////// */
 
 footer {
@@ -347,24 +386,6 @@ footer a {
     align-items: center;
 }
 
-.btn-container-extra {
-    margin-top: 20px;
-    /* // width: 90%; */
-    max-width: 1140px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container-f {
-    margin: auto;
-    width: 90%;
-    max-width: 1140px;
-    display: flex;
-    justify-content: right;
-    align-items: flex-end;
-}
-
 h6 {
     display: block;
     margin: 20px;
@@ -373,6 +394,69 @@ h6 {
     font-weight: lighter;
     color: lightgray;
 }
+
+.container-f {
+    display: flex;
+    justify-content: right;
+    align-items: flex-end;
+}
+
+.info-row {
+    /* // margin: auto; */
+    display: flex;
+    flex-wrap: wrap;
+    /*換行*/
+}
+
+@media(max-width:767px) {
+
+    footer .text-center {
+        text-align: center;
+    }
+
+    // .info-row{
+    //     padding: 20px;
+    // }
+}
+
+// intro
+.intro {
+    background-color: #f0f0f0;
+    width: auto;
+    display: flex;
+}
+
+.max-w350 {
+    max-width: 350px;
+}
+
+// 手機
+@media (max-width:768px) {
+    .intro {
+        height: auto;
+    }
+
+
+    .intro p {
+        line-height: 2;
+        margin-bottom: 30px;
+    }
+}
+
+// PC
+@media (min-width:768px) {
+    .intro {
+        height: 500px;
+    }
+
+    .intro p {
+        line-height: 2;
+    }
+}
+
+// .banner {
+//     background-size: cover;
+// }
 
 /* ////////////迴圈///////////// */
 
@@ -385,14 +469,39 @@ h6 {
 }
 
 @for $i from 1 through 12 {
-    .col-s-#{$i} {
+    .col-ex-#{$i} {
         --num: calc(12 / #{$i});
         width: calc(100% / var(--num) - 30px);
         margin: 20px 15px 20px 15px;
     }
 }
 
+@media (max-width:767px) {
+
+    // col and .simple-menu
+    @for $i from 1 through 12 {
+        .col-sm-#{$i} {
+            --num: calc(12 / #{$i});
+            width: calc(100% / var(--num) - 30px);
+            margin: 0px 15px 0px 15px;
+        }
+    }
+
+    @for $i from 1 through 5 {
+        .mb-#{$i} {
+            margin-bottom:$i*10px;
+        }
+    }
+
+    @for $i from 1 through 5 {
+        .mt-#{$i} {
+            margin-top:$i*10px;
+        }
+    }
+}
+
 @media (min-width:768px) {
+
     // col and .simple-menu
     @for $i from 1 through 12 {
         .col-md-#{$i} {
@@ -400,13 +509,6 @@ h6 {
             width: calc(100% / var(--num) - 30px);
             margin: 0px 15px 0px 15px;
         }
-    }
-
-    .simple-menu {
-        background-color: #F0F0F0;
-        /* background-image: url(public/images/gray-01.png); */
-        width: auto;
-        height: 700px;
     }
 }
 
@@ -419,82 +521,4 @@ h6 {
         }
     }
 }
-
 // 1200px end
-// phone
-@media(max-width:767px) {
-    .container {
-        margin: auto;
-        width: 100%;
-        max-width: 1140px;
-    }
-
-    .simple-menu {
-        background-color: #F0F0F0;
-        /* background-image: url(public/images/gray-01.png); */
-        width: auto;
-        height: auto;
-    }
-
-    .intro {
-        background-color: #F0F0F0;
-        /* background-image: url(public/images/gray-01.png); */
-        width: auto;
-        height: auto;
-    }
-
-    footer .text-center {
-        text-align: center;
-    }
-
-    .simple-menu h3 {
-        display: block;
-        margin-top: 20px;
-        margin-bottom: 40px;
-        font-weight: normal;
-    }
-
-    .btn-container-extra {
-        margin-top: 5px;
-        margin-bottom: 25px;
-        // width: 90%;
-        max-width: 1140px;
-        display: flex;
-        justify-content: center;
-        align-items: center
-    }
-
-    .mb-2 {
-        margin-bottom: 20px;
-    }
-
-    .mb-4 {
-        margin-bottom: 40px;
-    }
-
-    .mt-3 {
-        margin-top: 30px;
-    }
-
-    .banner {
-        background-size: cover;
-    }
-
-    .intro p{
-        margin-bottom: 30px;
-    }
-}
-
-// intro
-@media (min-width:768px) {
-.intro {
-    background-color: #f0f0f0;
-    width: auto;
-    height: 500px;
-    display: flex;
-}
-}
-
-.intro p{
-    line-height: 2;
-}
