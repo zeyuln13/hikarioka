@@ -236,6 +236,10 @@ header>.container>.row {
   padding-left: 20px;
 }
 
+.bread-crumb a {
+  color: #4a855e;
+}
+
 /* ////////////news///////////// */
 .news {
   background-color: black;
@@ -375,7 +379,7 @@ h6 {
     text-align: center;
   }
 }
-.intro {
+.common-intro {
   background-color: #f0f0f0;
   width: auto;
   display: flex;
@@ -386,22 +390,113 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  .intro {
+  .common-intro {
     height: auto;
   }
 
-  .intro p {
+  .common-intro p {
     line-height: 2;
     margin-bottom: 30px;
   }
 }
 @media (min-width: 768px) {
-  .intro {
+  .common-intro {
     height: 500px;
   }
 
-  .intro p {
+  .common-intro p {
     line-height: 2;
+  }
+}
+.common-news {
+  background-color: #f0f0f0;
+  width: auto;
+  display: flex;
+}
+
+.max-w350 {
+  max-width: 350px;
+}
+
+.common-news > .container > .row {
+  align-items: center;
+}
+
+.common-news h1 {
+  font-weight: normal;
+  text-shadow: 2px 2px 3px #cbc8c8;
+  line-height: 1.5em;
+}
+
+.common-news > .container > .row {
+  margin-bottom: 20px;
+}
+
+.common-news > .container > .row:last-child {
+  margin-bottom: 0;
+}
+
+.common-news a {
+  display: block;
+  text-decoration: none;
+  color: #b93a21;
+  text-align: left;
+  padding-top: 10px;
+}
+
+.common-news a:hover {
+  text-decoration: none;
+  color: #4a855e;
+}
+
+.common-news a:active {
+  color: black;
+}
+
+.common-news h5 {
+  color: #6d6b6b;
+}
+
+.line {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .common-news .row {
+    box-sizing: border-box;
+    border-bottom: 2px dotted #4a855e;
+  }
+
+  .common-news .row:last-child {
+    box-sizing: border-box;
+    border-bottom: 0;
+  }
+
+  .common-news {
+    height: auto;
+  }
+
+  .common-news h1 {
+    line-height: 1.5em;
+    font-size: 20px;
+  }
+
+  .common-news a {
+    display: block;
+    font-size: 1em;
+  }
+
+  .text-left {
+    text-align: left;
+  }
+
+  .common-news a {
+    padding-top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .common-news {
+    height: 900px;
   }
 }
 /* ////////////迴圈///////////// */
