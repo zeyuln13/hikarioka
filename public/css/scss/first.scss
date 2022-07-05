@@ -74,6 +74,7 @@ body {
 }
 
 /* header start */
+// header animation
 
 @keyframes t3 {
     0% {
@@ -89,7 +90,7 @@ body {
     animation: t3 7s infinite alternate;
 }
 
-// s
+// header
 .tittle-logo {
     width: auto;
 }
@@ -97,7 +98,7 @@ body {
 header {
     background-color: white;
     display: block;
-    height: 85px;
+    height: auto;
     max-width: auto;
 }
 
@@ -149,14 +150,22 @@ header>.container nav>ul>li>a:hover::after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24px;
+    // padding: 0 5px;
 }
+
+.navbar>a {
+  padding-left:0px;
+} *
 
 .nav-menu {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+}
+
+.navbar>.hamburger{
+    padding-right:20px;
 }
 
 /* .nav-branding{
@@ -190,6 +199,7 @@ color: darkgreen;
 /* 手機裝置 */
 
 @media (max-width:767px) {
+    // header
     header {
         z-index: 1;
         position: relative;
@@ -237,6 +247,20 @@ color: darkgreen;
     }
 }
 
+// 麵包屑
+.bread-crumb{
+    width: auto;
+    height: auto;
+    background-color: #f0f0f0;
+}
+
+.bread-crumb h5{
+    font-weight: lighter;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+}
+
 /* ////////////news///////////// */
 
 .news {
@@ -255,6 +279,7 @@ div.news h2 {
 }
 
 /* ////////////simple-menu///////////// */
+
 .simple-menu {
     height: 500px;
     display: flex;
@@ -300,7 +325,7 @@ div.news h2 {
 /* ////////////footer///////////// */
 
 footer {
-    height: 200px;
+    height: auto;
     width: auto;
 }
 
@@ -350,6 +375,7 @@ h6 {
 }
 
 /* ////////////迴圈///////////// */
+
 @for $i from 1 through 12 {
     .col-#{$i} {
         --num: calc(12 / #{$i});
@@ -367,6 +393,7 @@ h6 {
 }
 
 @media (min-width:768px) {
+    // col and .simple-menu
     @for $i from 1 through 12 {
         .col-md-#{$i} {
             --num: calc(12 / #{$i});
@@ -381,7 +408,6 @@ h6 {
         width: auto;
         height: 700px;
     }
-
 }
 
 @media (min-width:1200px) {
@@ -395,7 +421,7 @@ h6 {
 }
 
 // 1200px end
-
+// phone
 @media(max-width:767px) {
     .container {
         margin: auto;
@@ -439,7 +465,7 @@ h6 {
     }
 
     .mb-2 {
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
 
     .mb-4 {
@@ -459,7 +485,6 @@ h6 {
     }
 }
 
-
 // intro
 @media (min-width:768px) {
 .intro {
@@ -473,19 +498,3 @@ h6 {
 .intro p{
     line-height: 2;
 }
-
-// .banner-text{
-//     width: 90%;
-//     max-width: 320px;
-//     margin: auto;
-//     padding-top: 80px;
-//     padding-bottom:80px;
-//     /* background-color: rgba(255, 255, 255, 0.5); */
-//     color:rgb(177, 31, 31);
-//     font-size: 20px;
-//     text-shadow: 2px 2px 3px rgb(70, 70, 70);
-// }
-
-// .intro>.container>.row{
-//     margin-top: 30px;
-// }

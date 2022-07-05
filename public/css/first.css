@@ -85,7 +85,7 @@ body {
 header {
   background-color: white;
   display: block;
-  height: 85px;
+  height: auto;
   max-width: auto;
 }
 
@@ -126,14 +126,21 @@ header > .container nav > ul > li > a:hover::after {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
 }
 
-.nav-menu {
+.navbar > a {
+  padding-left: 0px;
+}
+
+* .nav-menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+}
+
+.navbar > .hamburger {
+  padding-right: 20px;
 }
 
 /* .nav-branding{
@@ -210,6 +217,19 @@ color: darkgreen;
     left: 0;
   }
 }
+.bread-crumb {
+  width: auto;
+  height: auto;
+  background-color: #f0f0f0;
+}
+
+.bread-crumb h5 {
+  font-weight: lighter;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
 /* ////////////news///////////// */
 .news {
   background-color: black;
@@ -271,7 +291,7 @@ div.news h2 {
 
 /* ////////////footer///////////// */
 footer {
-  height: 200px;
+  height: auto;
   width: auto;
 }
 
@@ -660,7 +680,7 @@ h6 {
   }
 
   .mb-2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
 
   .mb-4 {

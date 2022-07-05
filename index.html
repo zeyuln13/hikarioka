@@ -15,52 +15,38 @@
             src: url(Iansui094-Regular.woff);
         }
 
-        @media (min-width:768px) {
-        .banner {
-            background-image: url(public/images/index_banner_01.jpg);
-            background-size: 100%;
-            padding-bottom: 43.9%;
-            position: relative;
-            /* background-attachment: fixed; */
-            /* z-index: 1; */
-        }
-
         .beau {
             position: absolute;
-            margin: auto;
-            width: 90%;
-            max-width: 18%;
-            justify-content: center;
-            top: 30px;
-            left: 634px;
         }
-    }
 
-    @media (max-width:767px) {
+        @media (min-width:768px) {
+            .banner {
+                background-image: url(public/images/index_banner_01.jpg);
+                background-size: 100%;
+                padding-bottom: 43.9%;
+                position: relative;
+                /* background-attachment: fixed; */
+                /* z-index: 1; */
+            }
+
+            .beau {
+                transform: translateX(200%) translateY(0%);
+                width: 20%;
+            }
+        }
+
+        @media (max-width:767px) {
             .banner {
                 background-image: url(public/images/index_banner_02.png);
                 background-size: 100%;
-                padding-bottom: 20%;
+                padding-bottom: 100%;
                 position: relative;
                 background-size: cover;
             }
 
             .beau {
+                transform: translateX(55%) translateY(5%);
                 width: 50%;
-                max-width: 1140px;
-                margin: auto;
-                padding-top:40px;
-                padding-bottom: 180px;
-                padding-left: 95px;
-
-                /* background-color: rgba(255, 255, 255, 0.5); */
-                color: white;
-                font-size: 35px;
-                text-shadow: 2px 2px 3px rgb(70, 70, 70);
-            }
-
-            .banner-text>p {
-                margin-bottom: 20px;
             }
         }
     </style>
@@ -78,19 +64,19 @@
                         <a href="about.html" class="nav-link">關於我們</a>
                     </li>
                     <li class="nav-item">
-                        <a href="02-news.html" class="nav-link">最新消息</a>
+                        <a href="news.html" class="nav-link">最新消息</a>
                     </li>
                     <li class="nav-item">
-                        <a href="03-menu.html" class="nav-link">美味佳餚</a>
+                        <a href="menu.html" class="nav-link">美味佳餚</a>
                     </li>
                     <li class="nav-item">
-                        <a href="04-location.html" class="nav-link">餐廳位置</a>
+                        <a href="location.html" class="nav-link">餐廳位置</a>
                     </li>
                     <li class="nav-item">
-                        <a href="05-faq.html" class="nav-link">常見問題</a>
+                        <a href="faq.html" class="nav-link">常見問題</a>
                     </li>
                     <li class="nav-item">
-                        <a href="06-contact.html" class="nav-link">聯絡我們</a>
+                        <a href="contact.html" class="nav-link">聯絡我們</a>
                     </li>
                 </ul>
                 <div class="hamburger">
