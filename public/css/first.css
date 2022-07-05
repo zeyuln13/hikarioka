@@ -414,10 +414,6 @@ h6 {
   display: flex;
 }
 
-.max-w350 {
-  max-width: 350px;
-}
-
 .common-news > .container > .row {
   align-items: center;
 }
@@ -457,10 +453,6 @@ h6 {
   color: #6d6b6b;
 }
 
-.line {
-  display: none;
-}
-
 @media (max-width: 768px) {
   .common-news .row {
     box-sizing: border-box;
@@ -497,6 +489,45 @@ h6 {
 @media (min-width: 768px) {
   .common-news {
     height: 900px;
+  }
+}
+/* ////////////.common-lte///////////// */
+.common-lte {
+  background-color: #f0f0f0;
+  width: auto;
+  display: flex;
+}
+
+.common-lte > .container > .row {
+  align-items: center;
+}
+
+.max-w500 {
+  max-width: 500px;
+}
+
+@media (min-width: 768px) {
+  .common-intro {
+    height: 2000px;
+  }
+
+  .common-lte > .container {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .common-lte > .container > .row {
+    margin-bottom: 50px;
+  }
+
+  .common-lte > .container > .row:last-child {
+    margin-bottom: 20px;
+  }
+
+  .common-lte .row {
+    padding-bottom: 50px;
+    box-sizing: border-box;
+    border-bottom: 2px dotted #4a855e;
   }
 }
 /* ////////////迴圈///////////// */
