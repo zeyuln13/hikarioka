@@ -11,3 +11,10 @@ addEventListener("click",() => {
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }))
+
+
+$('.question-content').on('click', function () {
+    $(this).toggleClass('active')
+    $(this).siblings().removeClass('active')
+
+})//.question-content end

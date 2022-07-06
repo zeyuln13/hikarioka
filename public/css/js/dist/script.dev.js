@@ -12,3 +12,7 @@ document.querySelectorAll(".nav-link").forEach(function (n) {
     navMenu.classList.remove("active");
   });
 });
+$('.question-content').on('click', function () {
+  $(this).toggleClass('active');
+  $(this).siblings().removeClass('active');
+}); //.question-content end

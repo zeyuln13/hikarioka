@@ -343,6 +343,23 @@ footer a {
   margin-bottom: 20px;
 }
 
+footer > .container > .row {
+  justify-content: center;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social > a {
+  padding-right: 20px;
+}
+
+.social > a:last-child {
+  padding-right: 0;
+}
+
 .container-extra {
   margin: auto;
   width: 90%;
@@ -372,6 +389,10 @@ h6 {
   display: flex;
   flex-wrap: wrap;
   /*換行*/
+}
+
+footer > .container > .row > .row {
+  justify-content: center;
 }
 
 @media (max-width: 767px) {
@@ -416,20 +437,14 @@ h6 {
 
 .common-news > .container > .row {
   align-items: center;
+  padding-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .common-news h1 {
   font-weight: normal;
   text-shadow: 2px 2px 3px #cbc8c8;
   line-height: 1.5em;
-}
-
-.common-news > .container > .row {
-  margin-bottom: 20px;
-}
-
-.common-news > .container > .row:last-child {
-  margin-bottom: 0;
 }
 
 .common-news a {
@@ -451,14 +466,15 @@ h6 {
 
 .common-news h5 {
   color: #6d6b6b;
+  font-weight: normal;
 }
 
-@media (max-width: 768px) {
-  .common-news .row {
-    box-sizing: border-box;
-    border-bottom: 2px dotted #4a855e;
-  }
+.common-news .row {
+  box-sizing: border-box;
+  border-bottom: 2px dotted #4a855e;
+}
 
+@media (max-width: 767px) {
   .common-news .row:last-child {
     box-sizing: border-box;
     border-bottom: 0;
@@ -485,10 +501,37 @@ h6 {
   .common-news a {
     padding-top: 0;
   }
+
+  .common-news .row {
+    padding-bottom: 50px;
+  }
+
+  .common-news > .container {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .common-news > .container > .row {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .common-news > .container > .row {
+    padding-bottom: 0;
+  }
 }
 @media (min-width: 768px) {
-  .common-news {
-    height: 900px;
+  .common-news > .container {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+  .common-news > .container > .row {
+    margin-bottom: 50px;
+  }
+
+  .common-news h5 {
+    padding-left: 5px;
   }
 }
 /* ////////////.common-lte///////////// */
@@ -506,11 +549,31 @@ h6 {
   max-width: 500px;
 }
 
-@media (min-width: 768px) {
-  .common-intro {
-    height: 2000px;
-  }
+.common-lte h1 {
+  display: block;
+  line-height: 1.5em;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
 
+.pro-text > p {
+  margin-bottom: 25px;
+}
+
+.pro-text > ul > li {
+  margin-bottom: 25px;
+}
+
+.pro-text > ul {
+  margin-left: 4.8em;
+}
+
+.common-lte .row {
+  box-sizing: border-box;
+  border-bottom: 2px dotted #4a855e;
+}
+
+@media (min-width: 768px) {
   .common-lte > .container {
     margin-top: 50px;
     margin-bottom: 30px;
@@ -520,14 +583,126 @@ h6 {
     margin-bottom: 50px;
   }
 
-  .common-lte > .container > .row:last-child {
-    margin-bottom: 20px;
-  }
-
   .common-lte .row {
     padding-bottom: 50px;
-    box-sizing: border-box;
-    border-bottom: 2px dotted #4a855e;
+  }
+
+  .img-sma {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .pro-text {
+    font-size: 12px;
+  }
+
+  .common-lte h1 {
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+
+  .pro-text > p {
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .pro-text > ul > li {
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .pro-text > ul {
+    margin-left: 5em;
+  }
+
+  .img-big {
+    display: none;
+  }
+
+  .img-sma {
+    transform: translateY(-2%);
+  }
+
+  .common-lte img {
+    margin-bottom: 8px;
+  }
+
+  .common-lte .row:last-child {
+    border-bottom: 0;
+  }
+}
+/* ////////////faq///////////// */
+.common-faq {
+  background-color: #f0f0f0;
+  width: auto;
+  display: flex;
+  box-sizing: border-box;
+}
+
+.question-content {
+  border: 1px solid gray;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  line-height: 30px;
+  padding: 20px 50px 20px 30px;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.question-content.active {
+  display: block;
+  background-color: #b93a21;
+  color: white;
+}
+
+.question-content.active .answer {
+  display: block;
+  padding-top: 10px;
+}
+
+.question-content.active .icon-arrow {
+  transform: rotate(180deg);
+}
+
+.answer {
+  display: none;
+}
+
+.question {
+  position: relative;
+  text-shadow: 2px 2px 3px #cbc8c8;
+}
+
+.question > .icon-arrow {
+  text-shadow: none;
+}
+
+.icon-arrow {
+  transition: transform 0.3s;
+  position: absolute;
+  width: 30px;
+  line-height: 40px;
+  text-align: center;
+  /* background-color: pink; */
+  right: -35px;
+  top: -5px;
+}
+
+@media (min-width: 768px) {
+  .common-faq > .container {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .common-faq {
+    height: auto;
+  }
+
+  .common-faq > .container {
+    margin: 30px 10px 30px 10px;
   }
 }
 /* ////////////迴圈///////////// */
@@ -606,73 +781,73 @@ h6 {
 .col-ex-1 {
   --num: calc(12 / 1);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-2 {
   --num: calc(12 / 2);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-3 {
   --num: calc(12 / 3);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-4 {
   --num: calc(12 / 4);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-5 {
   --num: calc(12 / 5);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-6 {
   --num: calc(12 / 6);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-7 {
   --num: calc(12 / 7);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-8 {
   --num: calc(12 / 8);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-9 {
   --num: calc(12 / 9);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-10 {
   --num: calc(12 / 10);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-11 {
   --num: calc(12 / 11);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 .col-ex-12 {
   --num: calc(12 / 12);
   width: calc(100% / var(--num) - 30px);
-  margin: 20px 15px 20px 15px;
+  margin: 5px 15px -5px 15px;
 }
 
 @media (max-width: 767px) {
