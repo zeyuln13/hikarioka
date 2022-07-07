@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>曜丘｜美味佳餚</title>
+    <link rel="stylesheet" href="public/css/first.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <style>
+        @font-face {
+            font-family: Iansui094-Regular;
+            src: url(Iansui094-Regular.woff);
+        }
+
+        .tittle {
+            color: white;
+            letter-spacing: 8px;
+            text-shadow: 2px 2px 3px rgb(203, 200, 200);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .page-banner {
+            display: block;
+            background-image: url(public/images/banner/ban-03.jpg);
+            background-size: 100%;
+            position: relative;
+            background-position: center;
+            /* opacity: 0.8; */
+        }
+
+        @media (min-width:768px) {
+            .tittle {
+                font-size: 50px;
+            }
+
+            .page-banner {
+                padding-bottom: 20%;
+            }
+        }
+
+        @media (max-width:767px) {
+            .page-banner {
+                /* background-size: 100%; */
+                padding-bottom: 30%;
+                position: relative;
+                background-image: url(public/images/banner/ban-03.jpg);
+                background-size: cover;
+            }
+
+            .tittle {
+                font-size: 2.5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="nav-branding">
+                    <img class="tittle-logo" src="public/images/logo/fullogo.png" alt="曜丘" width="500px" height="85px">
+                </a>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="about.html" class="nav-link">關於我們</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="news.html" class="nav-link">最新消息</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="menu.html" class="nav-link">美味佳餚</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="location.html" class="nav-link">餐廳位置</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="faq.html" class="nav-link">常見問題</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contact.html" class="nav-link">聯絡我們</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="bread-crumb">
+        <div class="container">
+            <h5>
+                <a href="index.html">首頁</a>&emsp;＞&emsp;美味佳餚
+            </h5>
+        </div>
+    </div>
+
+    <div class="page-banner">
+        <div class="container">
+            <div class="tittle text-center">美味佳餚</div>
+        </div>
+    </div>
+
+    <div class="common-menu">
+        <div class="container">
+            <div class="row">
+                <aside class="col-smMu-12 col-md-3">
+                    <ul>
+                        <li><a href="">飯食</a></li>
+                        <li><a href="">麵食</a></li>
+                        <li><a href="">小吃</a></li>
+                        <li><a href="">甜點</a></li>
+                    </ul>
+                </aside>
+
+                <main class="col-smMu-12 col-md-9">
+                    <div class="row">
+
+                        <!-- rice -->
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/rice-edit/rice(1).png" alt="招牌親子丼">
+                            <h3>招牌親子丼</h3>
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/rice-edit/rice(2).png" alt="蒸木耳黑米飯">
+                            <h3>蒸木耳黑米飯</h3>
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/rice-edit/rice(3).png" alt="番薯炊飯">
+                            <h3>番薯炊飯</h3>
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/rice-edit/rice(4).png" alt="和風咖哩飯">
+                            <h3>和風咖哩飯</h3>
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/rice-edit/rice(5).png" alt="番茄雞肉咖哩飯">
+                            <h3>番茄雞肉咖哩飯</h3>
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/rice-edit/rice(6).png" alt="天津飯">
+                            <h3>天津飯</h3>
+                        </div>
+
+                        <!-- noodles -->
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/nodl-edit/nodl(1).png" alt="烤肉蕎麥沾麵">
+                            <h3>烤肉蕎麥沾麵</h3>   
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/nodl-edit/nodl(2).png" alt="明太子義大利麵">
+                            <h3>明太子義大利麵</h3>   
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/nodl-edit/nodl(3).png" alt="韓風涼麵">
+                            <h3>韓風涼麵</h3>   
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/nodl-edit/nodl(4).png" alt="越南河粉">
+                            <h3>越南河粉</h3>   
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/nodl-edit/nodl(5).png" alt="茄汁義大利麵">
+                            <h3>茄汁義大利麵</h3>   
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/nodl-edit/nodl(6).png" alt="海陸義大利麵">
+                            <h3>海陸義大利麵</h3>   
+                        </div>
+
+                        <!-- food -->
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/food-edit/food(1).png" alt="">
+                            <h3>芹菜章魚沙拉</h3>   
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/food-edit/food(2).png" alt="">
+                            <h3>炒花椰菜</h3>   
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/food-edit/food(3).png" alt="">
+                            <h3>酥炸春捲</h3>   
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/food-edit/food(4).png" alt="">
+                            <h3>大阪燒</h3>   
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/food-edit/food(5).png" alt="">
+                            <h3>清炒時蔬</h3>   
+                        </div>
+
+                        <div class="col-smMu-6 col-me-4 text-center">
+                            <img class="img-fluid" src="public/images/page4/food-edit/food(6).png" alt="">
+                            <h3>時蔬煎餅</h3>   
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <a class="col-ex-12 container-extra" href="index.html">
+                    <img class="tittle-logo" src="public/images/logo/fullogo.png" alt="cmyk" width="500px"
+                        height="85px"></a>
+                <div class="social">
+                    <a href="https://www.instagram.com/zeyuln_hoi/">
+                        <img src="public/images/iconmonstr-facebook-3.svg" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/zeyuln_hoi/">
+                        <img src="public/images/iconmonstr-instagram-13.svg" alt="Instagram"></a>
+                </div>
+                <div class="row">
+                    <div class="col-smMu-12 col-md-3 text-center mb-2">元善餐飲事業股份有限公司</div>
+                    <div class="col-smMu-12 col-md-3 text-center mb-2">聯絡電話：04-2422-0010</div>
+                    <div class="col-smMu-12 col-md-3 text-center mb-2">服務時間：09：00-18：00</div>
+                    <div class="col-smMu-12 col-md-3 text-center mb-2">台中市西區美村路一段187號4樓</div>
+                    <h6 class="col-smMu-12 text-center mb-2">Copyright© 2022 HIKARIOKA Design by ZHEYOULIN</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="public/css/js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</body>
+
+</html>

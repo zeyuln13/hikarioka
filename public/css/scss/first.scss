@@ -96,7 +96,7 @@ body {
     animation: t3 7s infinite alternate;
 }
 
-// header
+// header A
 .tittle-logo {
     width: auto;
 }
@@ -254,7 +254,7 @@ header>.container>.row {
     }
 }
 
-/* ////////////bread///////////// */
+/* ////////////bread A-1 /////////// */
 // 麵包屑
 .bread-crumb {
     width: auto;
@@ -273,7 +273,7 @@ header>.container>.row {
     color: rgb(74, 133, 94);
 }
 
-/* ////////////news///////////// */
+/* ////////////news  0-1 ///////// */
 
 .news {
     background-color: black;
@@ -290,7 +290,7 @@ div.news h2 {
     font-weight: bold;
 }
 
-/* ////////////simple-menu/////////////*/
+/* ////// simple-menu  0-2 /////*/
 
 .simple-menu {
     background-color: #F0F0F0;
@@ -365,7 +365,7 @@ div.news h2 {
     }
 }
 
-/* ////////////footer///////////// */
+/* ////////////footer B /////// */
 
 footer {
     height: auto;
@@ -444,7 +444,7 @@ footer>.container>.row>.row {
     // }
 }
 
-// common-intro
+// common-intro 1
 .common-intro {
     background-color: #f0f0f0;
     width: auto;
@@ -479,7 +479,7 @@ footer>.container>.row>.row {
     }
 }
 
-// common-news
+// common-news 2
 .common-news {
     background-color: #f0f0f0;
     width: auto;
@@ -505,7 +505,7 @@ footer>.container>.row>.row {
 .common-news a {
     display: block;
     text-decoration: none;
-    color: rgb(185, 58, 33);
+    color: black;
     text-align: left;
     padding-top: 10px;
     // padding-left: 10px;
@@ -513,11 +513,11 @@ footer>.container>.row>.row {
 
 .common-news a:hover {
     text-decoration: none;
-    color: rgb(74, 133, 94);
+    color: rgb(185, 58, 33);
 }
 
 .common-news a:active {
-    color: black;
+    color: rgb(74, 133, 94);
 }
 
 .common-news h5 {
@@ -549,15 +549,13 @@ footer>.container>.row>.row {
     .common-news a {
         display: block;
         font-size: 1em;
+        padding-top: 0;
     }
 
     .text-left {
         text-align: left;
     }
 
-    .common-news a {
-        padding-top: 0;
-    }
 
     .common-news .row {
         padding-bottom: 50px;
@@ -603,7 +601,7 @@ footer>.container>.row>.row {
     }
 }
 
-/* ////////////.common-lte///////////// */
+/* ////////////.common-lte 4 ///////////// */
 .common-lte {
     background-color: #f0f0f0;
     width: auto;
@@ -642,7 +640,6 @@ footer>.container>.row>.row {
     box-sizing: border-box;
     border-bottom: 2px dotted rgb(74, 133, 94);
 }
-
 
 // PC
 @media (min-width:768px) {
@@ -736,7 +733,7 @@ footer>.container>.row>.row {
     }
 }
 
-/* ////////////faq///////////// */
+/* ////////////faq 5 ///////// */
 
 .common-faq {
     background-color: #f0f0f0;
@@ -748,7 +745,7 @@ footer>.container>.row>.row {
 .question-content {
     border: 1px solid gray;
     border-radius: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     line-height: 30px;
     padding: 20px 50px 20px 30px;
     cursor: pointer;
@@ -810,10 +807,64 @@ footer>.container>.row>.row {
         height: auto;
     }
 
-    .common-faq > .container {
+    .common-faq>.container {
         margin: 30px 10px 30px 10px;
     }
 }
+
+/* ////////////MENU 3 ///////// */
+
+.common-menu {
+    background-color: #f0f0f0;
+    width: auto;
+    display: flex;
+}
+
+.common-menu aside>ul {
+    // width: 20%;
+    text-align: center;
+    // margin-top: 30px;
+}
+
+.common-menu ul>li {
+    display: block;
+    box-sizing: border-box;
+    // border: 1px solid black;
+    padding: 10px 10px 10px 10px;
+    margin-bottom: 15px;
+    background-color: rgb(185, 58, 33);
+    font-size: 1.2em;
+    border-radius: 30px;
+}
+
+.common-menu ul>li>a {
+    color: white;
+    letter-spacing: 3px;
+}
+
+.common-menu>.container>.row {
+    margin-top: 30px;
+}
+
+.common-menu main img {
+    margin-bottom: 10px;
+}
+
+.common-menu h3 {
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* ////////////迴圈///////////// */
 
@@ -844,6 +895,14 @@ footer>.container>.row>.row {
         }
     }
 
+    @for $i from 1 through 12 {
+        .col-smMu-#{$i} {
+            --num: calc(12 / #{$i});
+            width: calc(100% / var(--num) - 30px);
+            margin: 0px 15px 30px 15px;
+        }
+    }
+
     @for $i from 1 through 5 {
         .mb-#{$i} {
             margin-bottom: $i*10px;
@@ -867,6 +926,14 @@ footer>.container>.row>.row {
             margin: 0px 15px 0px 15px;
         }
     }
+
+    @for $i from 1 through 12 {
+        .col-me-#{$i} {
+            --num: calc(12 / #{$i});
+            width: calc(100% / var(--num) - 30px);
+            margin: 0px 15px 40px 15px;
+        }
+    }
 }
 
 @media (min-width:1200px) {
@@ -878,5 +945,3 @@ footer>.container>.row>.row {
         }
     }
 }
-
-// 1200px end
