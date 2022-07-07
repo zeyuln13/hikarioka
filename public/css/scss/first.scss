@@ -43,6 +43,10 @@ body {
     /*換行*/
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
 .flex-space-between {
     justify-content: space-between;
 }
@@ -278,16 +282,125 @@ header>.container>.row {
 .news {
     background-color: black;
     width: auto;
-    height: 500px;
+    height: 800px;
 }
 
-div.news h2 {
+.news h2 {
     display: block;
     color: rgb(255, 255, 255);
     padding-top: 30px;
     padding-bottom: 30px;
     letter-spacing: 2px;
     font-weight: bold;
+}
+
+/* ////// slide /////*/
+
+.parent {
+    /* 可視範圍寬 */
+    /* width: 500px; */
+    width: 100%;
+    /* max-width: 1140px; */
+    // margin: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.child {
+    /* 圖片寬度*項目個數 */
+    /* width: 2000px; */
+    /* 去除行內空白，文字大小0 */
+    font-size: 0;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+.parent img {
+    /* 同.parent寬 */
+    width: 500px;
+}
+
+/* div時用float */
+/* .son{
+    float: left;
+} */
+.left-arrow,
+.right-arrow {
+    position: absolute;
+    cursor: pointer;
+    background-color: rgba(98, 85, 85, 0.482);
+    width: 40px;
+    height: 40px;
+    top: 0px;
+    border: 2px solid rgb(255, 255, 255);
+    /* 設定較小塊的感應區 */
+    /* height: 40px; */
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.left-arrow {
+    right: 52px;
+    bottom: 40px;
+}
+
+.right-arrow {
+    right: 10px;
+    bottom: 10px;
+}
+
+.indicator {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indicator>li {
+    width: 10px;
+    height: 10px;
+    background-color: #F0F0F0;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.indicator>li:last-child {
+    margin-right: 0;
+}
+
+.indicator>li.active {
+    background-color: rgb(74, 133, 94);
+}
+
+@media (max-width:767px) {
+    .container {
+        margin: auto;
+        width: 90%;
+        max-width: 1140px;
+    }
+
+    .left-arrow,
+    .right-arrow {
+        width: 20px;
+        height: 20px;
+    }
+
+    .left-arrow {
+        right: 32px;
+        bottom: 40px;
+    }
 }
 
 /* ////// simple-menu  0-2 /////*/
@@ -301,7 +414,7 @@ div.news h2 {
 
 .simple-menu h2 {
     display: block;
-    color: rgb(0, 0, 0);
+    color: black;
     padding-top: 30px;
     padding-bottom: 30px;
     letter-spacing: 2px;
@@ -407,6 +520,7 @@ footer>.container>.row {
     align-items: center;
 }
 
+
 h6 {
     display: block;
     margin: 20px;
@@ -422,12 +536,21 @@ h6 {
     align-items: flex-end;
 }
 
-.info-row {
-    /* // margin: auto; */
-    display: flex;
-    flex-wrap: wrap;
-    /*換行*/
-}
+// footer>.container>.row>.row{
+//     font-size: 10px;
+// }
+
+// footer>.container>.row h6{
+//     font-size: 2px;
+// }
+
+// .info-row {
+//     /* // margin: auto; */
+//     display: flex;
+//     flex-wrap: wrap;
+//     /*換行*/
+//     font-size: 0.5em;
+// }
 
 footer>.container>.row>.row {
     justify-content: center;
@@ -854,11 +977,10 @@ footer>.container>.row>.row {
     font-weight: normal;
 }
 
-.img-overlay{
+.img-overlay {
     overflow: hidden;
     border-radius: 8px;
 }
-
 
 /* ////////////迴圈///////////// */
 
@@ -938,4 +1060,27 @@ footer>.container>.row>.row {
             margin: 0px 15px 0px 15px;
         }
     }
+}
+
+.common-cot {
+    background-color: #f0f0f0;
+    width: auto;
+}
+
+.common-cot>.container>.greet {
+    padding-top: 40px;
+}
+
+
+.greet>p {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.oneline {
+    display: block;
+    width: 450px;
+    height: 2px;
+    margin: 35px auto;
+    background-color:rgb(74, 133, 94); 
 }

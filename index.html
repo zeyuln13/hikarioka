@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="public/css/first.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="shortcut icon" href="favicon.ico">
+    <!-- slick css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <!-- slick theme css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
     <style>
         @font-face {
             font-family: Iansui094-Regular;
@@ -48,6 +52,13 @@
                 transform: translateX(55%) translateY(5%);
                 width: 50%;
             }
+        }
+
+        .one-time {
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            color: red;
         }
     </style>
 </head>
@@ -93,56 +104,176 @@
     </div>
 
     <div class="news">
-        <h2 class="text-center">｜&emsp;人氣消息&emsp;｜</h2>
-    </div>
-
-    <div class="simple-menu">
         <div class="container">
-            <h2 class="text-center">｜&emsp;美味佳餚&emsp;｜</h2>
-            <div class="row">
-                <div class="col-md-4 col-12"><img class="img-fluid" src="public/images/edit/nippon_curry-01.png"
-                        alt="和風咖哩飯">
-                    <h3 class="text-center">和風咖哩飯</h3>
+            <h2 class="text-center">｜&emsp;人氣消息&emsp;｜</h2>
+            <div class="parent">
+                <div class="child">
+                    <img src="public/images/page3/page3-1.png" alt="">
+                    <img src="public/images/page3/page3-2.png" alt="">
+                    <img src="public/images/page3/page3-1.png" alt="">
+                    <!-- <img src="public/images/d/dog (4).jpg" alt=""> -->
                 </div>
-                <div class="col-md-4 col-12"><img class="img-fluid" src="public/images/edit/octsalad-01.png"
-                        alt="芹菜章魚沙拉">
-                    <h3 class="text-center">芹菜章魚沙拉</h3>
-                </div>
-                <div class="col-md-4 col-12"><img class="img-fluid" src="public/images/edit/mentaiko-01.png"
-                        alt="明太子義大利麵">
-                    <h3 class="text-center">明太子義大利麵</h3>
-                </div>
+                <div class="left-arrow">＜</div>
+                <div class="right-arrow">＞</div>
+                <!-- ol.indicator>li*4 -->
+                <ol class="indicator">
+                    <li class="active"></li>
+                </ol>
             </div>
-            <div class="btn-container-extra"><a href="03-menu.html">更多美味</a></div>
         </div>
-    </div>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <a class="col-ex-12 container-extra" href="index.html">
-                    <img class="tittle-logo" src="public/images/logo/fullogo.png" alt="cmyk" width="500px"
-                        height="85px"></a>
-                <div class="social">
-                    <a href="index.html">
-                        <img src="public/images/iconmonstr-facebook-3.svg" alt="Facebook"></a>
-                    <a href="index.html">
-                        <img src="public/images/iconmonstr-instagram-13.svg" alt="Instagram"></a>
-                </div>
+        <div class="simple-menu">
+            <div class="container">
+                <h2 class="text-center">｜&emsp;美味佳餚&emsp;｜</h2>
                 <div class="row">
-                    <div class="col-sm-12 col-md-3 text-center mb-2">元善餐飲事業股份有限公司</div>
-                    <div class="col-sm-12 col-md-3 text-center mb-2">聯絡電話：04-2422-0010</div>
-                    <div class="col-sm-12 cols-md-3 text-center mb-2">服務時間：09：00-18：00</div>
-                    <div class="col-sm-12 col-md-3 text-center mb-2">台中市西區美村路一段187號4樓</div>
-                    <h6 class="col-sm-12 text-center mb-2">Copyright© 2022 HIKARIOKA Design by ZHEYOULIN</h6>
+                    <div class="col-md-4 col-12"><img class="img-fluid" src="public/images/edit/nippon_curry-01.png"
+                            alt="和風咖哩飯">
+                        <h3 class="text-center">和風咖哩飯</h3>
+                    </div>
+                    <div class="col-md-4 col-12"><img class="img-fluid" src="public/images/edit/octsalad-01.png"
+                            alt="芹菜章魚沙拉">
+                        <h3 class="text-center">芹菜章魚沙拉</h3>
+                    </div>
+                    <div class="col-md-4 col-12"><img class="img-fluid" src="public/images/edit/mentaiko-01.png"
+                            alt="明太子義大利麵">
+                        <h3 class="text-center">明太子義大利麵</h3>
+                    </div>
                 </div>
+                <div class="btn-container-extra"><a href="03-menu.html">更多美味</a></div>
             </div>
         </div>
-    </footer>
-    <script src="public/css/js/script.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <a class="col-ex-12 container-extra" href="index.html">
+                        <img class="tittle-logo" src="public/images/logo/fullogo.png" alt="cmyk" width="500px"
+                            height="85px"></a>
+                    <div class="social">
+                        <a href="index.html">
+                            <img src="public/images/iconmonstr-facebook-3.svg" alt="Facebook"></a>
+                        <a href="index.html">
+                            <img src="public/images/iconmonstr-instagram-13.svg" alt="Instagram"></a>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 col-md-3 text-center mb-2">元善餐飲事業股份有限公司</div>
+                        <div class="col-sm-12 col-md-3 text-center mb-2">聯絡電話：04-2422-0010</div>
+                        <div class="col-sm-12 cols-md-3 text-center mb-2">服務時間：09：00-18：00</div>
+                        <div class="col-sm-12 col-md-3 text-center mb-2">台中市西區美村路一段187號4樓</div>
+                        <h6 class="col-sm-12 text-center mb-2">Copyright© 2022 HIKARIOKA Design by ZHEYOULIN</h6>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <!-- slick js -->
+        <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script src="public/css/js/script.js"></script>
+        <script>
+            // 第二層裡面最前面 補上 圖片陣列的最後一個 的複製元素
+            $('.child').prepend($('.child>img').last().clone())
+            // 第二層裡面最後面 補上 圖片陣列的第二個的 複製元素
+            $('.child').append($('.child>img').eq(1).clone())
+
+            let currentLeftNum = 0 //左邊位移的距離(0/-??)
+            let currentNum = 1 //當前的數字
+            let parentWidth = $('.parent').width() //父層寬度
+            let imgLength = $('.child>img').length //子層個數
+            let childTotalWidth = parentWidth * imgLength //父層寬度*子層個數
+
+            // 調整第二層一開始位移的位置
+            $('.child').css({ 'margin-left': -parentWidth * (currentNum) }) // -500*1
+
+            $('.child').width(childTotalWidth) //子層總寬 = 父層寬度*子層圖片個數(進到畫面讀一次)
+            $('.child>img').width(parentWidth) //子層下的圖片寬 = 父層寬度
+
+            // 蓋板跳轉至首頁的幻燈
+            $(window).on('load', function () {
+                // console.log('window load',$('img').height())
+
+                $('.loading-overlay').addClass('active')
+
+                parentWidth = $('.parent').width()
+                childTotalWidth = parentWidth * imgLength
+                $('.child').css({ 'margin-left': -parentWidth * currentNum })
+                $('.child').width(childTotalWidth)
+                $('.child>img').width(parentWidth)
+            })// window load end
+
+            // for迴圈自動生成輪播圓總數
+            for (let i = 0; i < imgLength - 3; i++) {
+                $('.indicator>li.active').after('<li></li>')
+            }// console.log(i)
+
+            // 螢幕大小時的變化
+            $(window).resize(function () {
+                // console.log('window load', $('.img').height())
+                parentWidth = $('.parent').width()
+                childTotalWidth = parentWidth * imgLength
+                $('.child').css({ 'margin-left': -parentWidth * (currentNum) })
+                $('.child').width(childTotalWidth)
+                $('.child>img').width(parentWidth)
+            })// window resize end
+
+            $('.right-arrow').on('click', function () {
+                // console.log('外', currentNum)
+                if (currentNum == imgLength - 1) { // 假如當前的數字相等於圖片總數
+                } else {
+                    currentNum = currentNum + 1 //當前的數字累加1
+                    // console.log('內',currentNum)
+                    common()
+                    // $('.child').animate({ 'margin-left': -parentWidth * (currentNum - 1) })
+
+                    // [-parentWidth /-500/ ] * ( [currentNum + 1] /2/ - 1 )
+                } // if currentNum == imgLength end
+            }) // .right-arrow end
+
+            $('.left-arrow').on('click', function () {
+                if (currentNum == 0) {
+
+                } else {
+                    currentNum = currentNum - 1
+                    common()
+                    // $('.child').animate({ 'margin-left': -parentWidth * (currentNum - 1) })
+                } // if currentNum == 1 end
+            }) // .left-arrow end
+
+            $('.indicator>li').on('click', function () {
+                // console.log('當前的', currentNum)
+                // console.log('跟我點的', $(this).index())
+                // index 序列號
+                // eq() 第幾個的元素
+                currentNum = $(this).index() + 1 // 為了上方程式碼的結果(當前數字=點擊的序列號+1)
+                common()
+                // $('.indicator>li').eq(currentNum - 1).addClass('active') // 減回原本的序列號
+                // $('.indicator>li').eq(currentNum - 1).siblings().removeClass('active')
+
+                // $(this).addClass('active')
+                // $(this).siblings().removeClass('active')
+            })// .indicator>li end
+
+            function common() {
+                // $('.child').animate({'margin-left': -parentWidth * currentNum},callback)
+                $('.child').animate({ 'margin-left': -parentWidth * currentNum }, 400, function () {
+                    //==== callback 函式執行完之後執行=====
+                    // 假如當前的數字 相等於 總數 - 1 
+                    if (currentNum == imgLength - 1) {
+                        currentNum = 1
+                    }
+                    // 前面動畫跑完時執行
+                    $('.child').css({ 'margin-left': -parentWidth * currentNum })
+                    $('.indicator>li').eq(currentNum - 1).addClass('active')
+                    $('.indicator>li').eq(currentNum - 1).siblings().removeClass('active')
+
+                }) //callback end
+            } // common() end
+
+            setInterval(function () {
+                $('.right-arrow').click()
+            }, 3000)
+        </script>
 </body>
 
 </html>
