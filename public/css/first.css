@@ -740,6 +740,11 @@ footer > .container > .row > .row {
   font-weight: normal;
 }
 
+.img-overlay {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
 /* ////////////迴圈///////////// */
 .col-1 {
   --num: calc(12 / 1);
