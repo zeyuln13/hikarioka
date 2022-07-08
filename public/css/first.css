@@ -1412,8 +1412,49 @@ footer > .container > .row > .row {
 
 .oneline {
   display: block;
-  width: 450px;
+  width: 80%;
   height: 2px;
   margin: 35px auto;
   background-color: #4a855e;
+}
+
+section.form {
+  padding-top: 25px;
+  padding-bottom: 80px;
+}
+
+.form-container {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.input-width {
+  width: 100%;
+  border: none;
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.btn-primary {
+  width: 30%;
+  margin-left: 35%;
+  cursor: pointer;
+  color: white;
+  background-color: #4a855e;
+}
+
+#check-order {
+  display: none;
+}
+
+.gender {
+  margin-bottom: 15px;
 }
