@@ -8,6 +8,7 @@
     <title>曜丘｜聯絡我們</title>
     <link rel="stylesheet" href="public/css/first.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="public/css/js/WOW-master/css/libs/animate.css">
     <link rel="shortcut icon" href="favicon.ico">
     <style>
         @font-face {
@@ -167,7 +168,7 @@
                             <label for="email">E-mail</label>
                             <input class="input-width" type="email" id="email" name="email" placeholder="請輸入您的E-mail">
                         </div>
-                        
+
                         <label for="message">需求說明</label>
                         <textarea class="input-width" name="message" id="message" cols="30" rows="10"></textarea>
 
@@ -199,10 +200,66 @@
             </div>
         </div>
     </footer>
-    <script src="public/css/js/script.js"></script>
+
+    <a class="page-top" href="javascript:;">top</a>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="public/css/js/WOW-master/dist/wow.min.js"></script>
+    <script src="public/css/js/script.js"></script>
+    <script>
+        new WOW().init();
+
+        let offsetTop
+        let product1Top = $('.container').offset().top
+        $(window).scroll(function () {
+            offsetTop = $(window).scrollTop()
+            // console.log('卷軸高', offsetTop)
+            if (offsetTop >= 200) {
+                $('.page-top').addClass('active')
+            } else {
+                $('.page-top').removeClass('active')
+            }
+        })//scroll end
+
+        $('.page-top').on('click', function () {
+            $('html, body').animate({ scrollTop: 0 })
+        })//.page-top
+
+        // 點按page-top回到最上方
+        $('.page-top').on('click', function () {
+            $('html, body').animate({ scrollTop: 0 })
+        })//.page-top
+
+        function gsapAnimate() {
+            // console.log('gsap')
+            if ($(window).width() >= 768) {
+                $(window).scroll(function () {
+                    offsetTop = $(window).scrollTop()
+                    // console.log(offsetTop/10)
+                    gsap.to(".deco-1", { y: -offsetTop / 10, duration: 1 })
+                    gsap.to(".deco-2", { y: -offsetTop / 5, duration: 1 })
+
+                }) // scroll end
+            } else {
+                $(window).scroll(function () {
+                    offsetTop = $(window).scrollTop()
+                    // console.log(offsetTop/3)
+                    gsap.to(".deco-1", { y: -offsetTop / 5, duration: 1 })
+                    gsap.to(".deco-2", { y: -offsetTop / 3, duration: 1 })
+
+                }) // scroll end
+            }
+        }
+        gsapAnimate()
+
+
+
+
+
+    </script>
+
 </body>
 
 </html>

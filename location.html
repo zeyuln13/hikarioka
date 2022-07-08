@@ -119,7 +119,7 @@
 
     <div class="common-lte">
         <div class="container">
-            <div class="row">
+            <div class="row wow fadeInDown">
                 <div class="col-sm-6 col-md-6 mt-3">
                     <div class="img-overlay">
                         <img class="img-big img-fluid" src="public/images/page5/loc1.png" alt="">
@@ -152,7 +152,7 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div class="row">
+            <div class="row wow fadeInDown">
                 <div class="col-sm-6 col-md-6 mt-3">
                     <div class="img-overlay">
                         <img class="img-big img-fluid" src="public/images/page5/loc2.png" alt="">
@@ -185,7 +185,7 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div class="row mb-1">
+            <div class="row mb-1 wow fadeInDown">
                 <div class="col-sm-6 col-md-6 mt-3">
                     <div class="img-overlay">
                         <img class="img-big img-fluid" src="public/images/page5/loc3.png" alt="">
@@ -217,7 +217,7 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <div class="btn-container-extra"><a href="#">回上方</a></div>
+            <!-- <div class="btn-container-extra"><a href="#">回上方</a></div> -->
         </div>
     </div>
 
@@ -243,12 +243,62 @@
             </div>
         </div>
     </footer>
-    
+
+    <a class="page-top" href="javascript:;">top</a>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <!-- slick js -->
     <script src="public/css/js/WOW-master/dist/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="public/css/js/script.js"></script>
+    <script>
+        new WOW().init();
+
+        let offsetTop
+        let product1Top = $('.container').offset().top
+        $(window).scroll(function () {
+            offsetTop = $(window).scrollTop()
+            // console.log('卷軸高', offsetTop)
+            if (offsetTop >= 2000) {
+                $('.page-top').addClass('active')
+            } else {
+                $('.page-top').removeClass('active')
+            }
+        })//scroll end
+
+        $('.page-top').on('click', function () {
+            $('html, body').animate({ scrollTop: 0 })
+        })//.page-top
+
+        // 點按page-top回到最上方
+        $('.page-top').on('click', function () {
+            $('html, body').animate({ scrollTop: 0 })
+        })//.page-top
+
+        function gsapAnimate() {
+            // console.log('gsap')
+            if ($(window).width() >= 768) {
+                $(window).scroll(function () {
+                    offsetTop = $(window).scrollTop()
+                    // console.log(offsetTop/10)
+                    gsap.to(".deco-1", { y: -offsetTop / 10, duration: 1 })
+                    gsap.to(".deco-2", { y: -offsetTop / 5, duration: 1 })
+
+                }) // scroll end
+            } else {
+                $(window).scroll(function () {
+                    offsetTop = $(window).scrollTop()
+                    // console.log(offsetTop/3)
+                    gsap.to(".deco-1", { y: -offsetTop / 5, duration: 1 })
+                    gsap.to(".deco-2", { y: -offsetTop / 3, duration: 1 })
+
+                }) // scroll end
+            }
+        }
+        gsapAnimate()
+    </script>
 </body>
 
 </html>

@@ -8,6 +8,7 @@
     <title>曜丘｜美味佳餚</title>
     <link rel="stylesheet" href="public/css/first.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="public/css/js/WOW-master/css/libs/animate.css">
     <link rel="shortcut icon" href="favicon.ico">
     <style>
         @font-face {
@@ -108,7 +109,7 @@
                 <a href="index.html">首頁</a>&emsp;＞&emsp;<a href="menu.html">美味佳餚</a>&emsp;＞&emsp;小吃
             </h5>
         </div>
-    </div>
+        </div>
 
     <div class="page-banner">
         <div class="container">
@@ -121,60 +122,65 @@
             <div class="row">
                 <aside class="col-smMu-12 col-md-3">
                     <ul>
-                        <li><a href="rice.html">飯食</a></li>
-                        <li><a href="noodles.html">麵食</a></li>
-                        <li><a href="sidedishes.html">小吃</a></li>
-                        <li><a href="soup.html">湯品</a></li>
-                        <li><a href="sweet.html">甜品</a></li>
+                        <li class=" wow fadeInDown"><a href="rice.html">飯食</a></li>
+                        <li class=" wow fadeInDown"><a href="noodles.html">麵食</a></li>
+                        <li class=" wow fadeInDown"><a href="sidedishes.html">小吃</a></li>
+                        <li class=" wow fadeInDown"><a href="soup.html">湯品</a></li>
+                        <li class=" wow fadeInDown"><a href="sweet.html">甜品</a></li>
                     </ul>
                 </aside>
 
                 <main class="col-smMu-12 col-md-9">
                     <div class="row">
 
-                        <div class="col-smMu-6 col-me-4 text-center">
+                        <!-- food -->
+                        <div class="  wow fadeInDown col-smMu-6 col-me-4 text-center">
                             <div class="img-overlay"><img class="img-fluid"
                                     src="public/images/page4/food-edit/food(1).png" alt="">
                             </div>
                             <h3>芹菜章魚沙拉</h3>
                         </div>
 
-                        <div class="col-smMu-6 col-me-4 text-center">
+                        <div class="  wow fadeInDown col-smMu-6 col-me-4 text-center">
                             <div class="img-overlay"><img class="img-fluid"
                                     src="public/images/page4/food-edit/food(2).png" alt="">
                             </div>
                             <h3>炒花椰菜</h3>
                         </div>
 
-                        <div class="col-smMu-6 col-me-4 text-center">
+                        <div class="  wow fadeInDown col-smMu-6 col-me-4 text-center">
                             <div class="img-overlay"><img class="img-fluid"
                                     src="public/images/page4/food-edit/food(3).png" alt="">
                             </div>
                             <h3>酥炸春捲</h3>
                         </div>
 
-                        <div class="col-smMu-6 col-me-4 text-center">
+                        <div class="  wow fadeInDown col-smMu-6 col-me-4 text-center">
                             <div class="img-overlay"><img class="img-fluid"
                                     src="public/images/page4/food-edit/food(4).png" alt="">
                             </div>
                             <h3>大阪燒</h3>
                         </div>
 
-                        <div class="col-smMu-6 col-me-4 text-center">
+                        <div class="  wow fadeInDown col-smMu-6 col-me-4 text-center">
                             <div class="img-overlay"><img class="img-fluid"
                                     src="public/images/page4/food-edit/food(5).png" alt="">
                             </div>
                             <h3>清炒時蔬</h3>
                         </div>
 
-                        <div class="col-smMu-6 col-me-4 text-center">
+                        <div class="  wow fadeInDown col-smMu-6 col-me-4 text-center">
                             <div class="img-overlay">
                                 <img class="img-fluid" src="public/images/page4/food-edit/food(6).png" alt="">
                             </div>
                             <h3>時蔬煎餅</h3>
                         </div>
+
                 </main>
             </div>
+
+            <!-- <div class="btn-container-extra"><a href="#">回上方</a></div> -->
+
         </div>
     </div>
 
@@ -200,10 +206,62 @@
             </div>
         </div>
     </footer>
-    <script src="public/css/js/script.js"></script>
+
+    <a class="page-top" href="javascript:;">top</a>
+
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="public/css/js/WOW-master/dist/wow.min.js"></script>
+    <script src="public/css/js/script.js"></script>
+
+    <script>
+        new WOW().init();
+
+        let offsetTop
+        let product1Top = $('.container').offset().top
+        $(window).scroll(function () {
+            offsetTop = $(window).scrollTop()
+            // console.log('卷軸高', offsetTop)
+            if (offsetTop >= 700) {
+                $('.page-top').addClass('active')
+            } else {
+                $('.page-top').removeClass('active')
+            }
+        })//scroll end
+
+        $('.page-top').on('click', function () {
+            $('html, body').animate({ scrollTop: 0 })
+        })//.page-top
+
+        // 點按page-top回到最上方
+        $('.page-top').on('click', function () {
+            $('html, body').animate({ scrollTop: 0 })
+        })//.page-top
+
+        function gsapAnimate() {
+            // console.log('gsap')
+            if ($(window).width() >= 768) {
+                $(window).scroll(function () {
+                    offsetTop = $(window).scrollTop()
+                    // console.log(offsetTop/10)
+                    gsap.to(".deco-1", { y: -offsetTop / 10, duration: 1 })
+                    gsap.to(".deco-2", { y: -offsetTop / 5, duration: 1 })
+
+                }) // scroll end
+            } else {
+                $(window).scroll(function () {
+                    offsetTop = $(window).scrollTop()
+                    // console.log(offsetTop/3)
+                    gsap.to(".deco-1", { y: -offsetTop / 5, duration: 1 })
+                    gsap.to(".deco-2", { y: -offsetTop / 3, duration: 1 })
+
+                }) // scroll end
+            }
+        }
+        gsapAnimate()
+    </script>
+
 </body>
 
 </html>
