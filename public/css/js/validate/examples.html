@@ -3,33 +3,33 @@
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <title></title>
-  <link rel="stylesheet" href="./examples_files/bootstrap.min.css">
-  <link rel="stylesheet" href="./examples_files/bootstrap-theme.min.css">
-  <script src="./examples_files/underscore-min.js.下載"></script>
-  <script src="./examples_files/moment.min.js.下載"></script>
-  <script src="./examples_files/validate.js.下載"></script>
+  <!-- <link rel="stylesheet" href="./examples_files/bootstrap.min.css"> -->
+  <!-- <link rel="stylesheet" href="./examples_files/bootstrap-theme.min.css"> -->
+  <script src="public/js/validate/underscore-min.js"></script>
+  <script src="public/js/validate/moment.min.js"></script>
+  <script src="public/js/validate/validate.js"></script>
   <style>
     .help-block.error {
       margin-bottom: 5px;
     }
+    .messages{
+      color:red;
+    }
   </style>
 </head>
-<body data-new-gr-c-s-check-loaded="14.1067.0" data-gr-ext-installed="">
+<body>
   <div class="container">
     <h1>Validate.js example</h1>
-    <!--
-    This is an example form that shows some common input types and how to
-    validate them.
-
-    The native HTML form validate has been disabled to show how validate.js works
-    in action.
-    -->
+    
+    <!-- 1.要寫id，表單欄位要放在form裡面 -->
     <form id="main" class="form-horizontal" action="https://validatejs.org/example" method="post" novalidate="">
+      <!-- 2.父層class名稱 .form-group -->
       <div class="form-group">
         <label class="col-sm-2 control-label" for="email">Email</label>
         <div class="col-sm-5">
           <input id="email" class="form-control" type="email" placeholder="Email" name="email">
         </div>
+        <!-- 3.錯誤訊息放置元素 .messages -->
         <div class="col-sm-5 messages"></div>
       </div>
       <div class="form-group">
@@ -334,6 +334,7 @@
         </div>
       </div>
     </form>
+    
   </div>
   <script>
     (function() {
@@ -356,9 +357,9 @@
       var constraints = {
         email: {
           // Email is required
-          presence: true,
+          presence: {message: '為必填項目'},
           // and must be an email (duh)
-          email: true
+          email: {message: '為電子郵件的格式'}
         },
         password: {
           // Password is also required
@@ -398,8 +399,8 @@
           presence: true,
           // and must be born at least 18 years ago
           date: {
-            latest: moment().subtract(18, "years"),
-            message: "^You must be at least 18 years old to use this service"
+            // latest: moment().subtract(18, "years"),
+            // message: "^You must be at least 18 years old to use this service"
           }
         },
         country: {
@@ -526,4 +527,4 @@
   </script>
 
 
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
+</body></html>
