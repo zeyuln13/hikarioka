@@ -121,45 +121,81 @@
         <div class="container wow fadeInDown">
             <div class="row wow fadeInDown">
                 <div class="col-sm-12 col-md-6 mt-3">
-                    <a href="index.html">
-                        <div class="img-overlay">
-                            <img class="img-fluid" src="public/images/page3/page3-1.png" alt="鬆軟滑嫩的天津飯 好評上市！">
-                        </div>
+                    <a href="#"></a>
+                    <div class="img-overlay">
+                        <img class="img-fluid" src="public/images/page3/ad (2).jpg" alt="夏日季2022 新品消暑上市">
+                    </div>
                     </a>
                 </div>
+
                 <div class="col-sm-12 col-md-6 mb-3">
                     <h5 class="text-left mt-1">2022-07-06 最新活動</h5>
-                    <h1 class="text-center text-left mt-1"><a href="">鬆軟滑嫩的天津飯 好評上市！</a></h1>
-                    <a class="mt-1" href="#">了解詳情...</a>
+                    <h1 class="text-center text-left mt-1"><a href="javascript:;" onclick="openModal();"
+                            id="open-modal">夏日季2022 新品消暑上市</a></h1>
+                    <a class"mt-1" href="javascript:;" onclick="openModal();" id="open-modal">了解詳情...</a>
+                </div>
+
+            </div>
+
+            <div class="modal-wrapper">
+                <div class="modal-content">
+                    <div id="btn-close-switch" class="btn-close">X</div>
+
+                    <div class="img-ad">
+                        <img class="img-fluid" src="public/images/page3/ad (2).jpg" alt="夏日季2022 新品消暑上市">
+                    </div>
+
+                    <h1 class="text-center text-left mt-1">夏日季2022 新品消暑上市</h1>
+
+                    <p>
+                        為了迎接今年的酷暑，曜丘特別送上2022年的夏日季新品，讓您消暑降火無負擔！
+                    </p>
+
+                    <ul>
+                        <li>
+                            <p>★鮭魚炊飯★</p>
+                            <p>以小火煎出鮭魚的香氣和油脂加上小魚乾、鴻喜菇的鮮美與白米一同炊煮，既美味又養生！</p>
+                        </li>
+                        <li>
+                            <p>★海藻涼麵★</p>
+                            <p>融合泡菜、雞絲再搭上海藻沙拉的涼麵，飽足感滿滿，美味又健康！</p>
+                        </li>
+                        <li>
+                            <p>★西瓜寒天★</p>
+                            <p>新鮮西瓜切片搭上寒天與檸檬片為基底的氣泡水，讓您沁涼一夏！</p>
+                        </li>
+                    </ul>
+
                 </div>
             </div>
 
+
             <div class="row wow fadeInDown">
                 <div class="col-sm-12 col-md-6 mt-3">
-                    <a href="index.html">
+                    <a href="#">
                         <div class="img-overlay">
-                            <img class="img-fluid" src="public/images/page3/page3-2.png" alt="鬆軟滑嫩的天津飯 好評上市！">
+                            <img class="img-fluid" src="public/images/page3/ad (1).jpg" alt="期間限定! 蜜圓豆花新上市">
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-12 col-md-6 mb-3">
                     <h5 class="text-left mt-1">2022-06-12 最新活動</h5>
-                    <h1 class="text-center text-left mt-1"><a href="">慶開幕！用餐打卡送炒花椰菜</a></h1>
+                    <h1 class="text-center text-left mt-1"><a href="">期間限定! 蜜圓豆花新上市</a></h1>
                     <a class="mt-1" href="#">了解詳情...</a>
                 </div>
             </div>
 
             <div class="row wow fadeInDown">
                 <div class="col-sm-12 col-md-6 mt-3">
-                    <a href="index.html">
+                    <a href="#">
                         <div class="img-overlay">
-                            <img class="img-fluid" src="public/images/page3/page3-1.png" alt="鬆軟滑嫩的天津飯 好評上市！">
+                            <img class="img-fluid" src="public/images/page3/ad (3).jpg" alt="開幕限定! 免費招待味噌湯一份">
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-12 col-md-6 mb-3">
                     <h5 class="text-left mt-1">2022-06-01 最新活動</h5>
-                    <h1 class="text-center text-left mt-1"><a href="">鬆軟滑嫩的天津飯 好評上市！</a></h1>
+                    <h1 class="text-center text-left mt-1"><a href="">開幕限定! 免費招待味噌湯</a></h1>
                     <a class="mt-1" href="#">了解詳情...</a>
                 </div>
             </div>
@@ -194,7 +230,7 @@
 
     <a class="page-top" href="javascript:;">top</a>
 
-     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
     <script src="public/css/js/WOW-master/dist/wow.min.js"></script>
@@ -248,6 +284,28 @@
             }
         }
         gsapAnimate()
+
+        // 
+
+        let modalWrapper = document.getElementsByClassName('modal-wrapper')[0]
+        let btnCloseSwitch = document.getElementById('btn-close-switch')
+        btnCloseSwitch.addEventListener('click', closeModal)
+        modalWrapper.addEventListener('click', closeModal)
+
+        function openModal() {
+            modalWrapper.classList.add('active')
+        } // openModal end
+
+        function closeModal(e) {
+            // console.log(e.target)
+            // console.log(this)
+            if (e.target == this) {
+                console.log('符合事件的選取器')
+                modalWrapper.classList.remove('active')
+            } else {
+                console.log('不符合')
+            }
+        } //closeModal end
 
     </script>
 </body>
