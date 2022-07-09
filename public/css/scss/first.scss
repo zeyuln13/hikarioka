@@ -282,7 +282,7 @@ header>.container>.row {
 /* ////////////news  0-1 ///////// */
 
 .news {
-    background-color: rgb(185, 58, 33);
+    background-color:rgb(35, 24, 21);
     width: auto;
     height: auto;
 }
@@ -1362,3 +1362,126 @@ label {
     padding-bottom: 15px;
     line-height: 1.5rem;
 }
+
+.modal-wrapper h1{
+    font-weight: normal;
+    text-shadow: 2px 2px 3px rgb(203, 200, 200);
+    line-height: 1.5em;
+}
+
+// 
+
+.icon-new{
+    position: absolute;
+    width: 50px;
+    line-height: 50px;
+    color:white;
+    border-radius: 100%;
+    left:-25px;
+    top:-15px;
+    font-size: 1rem;
+    // 下方正中間
+    // bottom:-25px;
+    // left:50%;
+    // margin-left: -25px;
+    background-color: rgb(74, 133, 94);
+}
+
+section{
+    position: relative;
+}
+// 
+
+// .position-relative{
+//     position: relative;
+// }
+// .position-absolute{
+//     position: absolute;
+// }
+// .deco-1{
+//     right:0px;
+//     top:50%;
+//     transform: translateY(-50%);
+//     width: 100px;
+//     height: 100px;
+//     background-color: lightgreen;
+// }
+
+// .deco-2{
+//     left:0px;
+//     top:40%;
+//     transform: translateY(-50%);
+//     width: 100px;
+//     height: 100px;
+//     background-color: lightcoral;
+// }
+
+.ff {
+    background-color: rgb(185, 58, 33);
+    position: fixed;
+    right: 10px;
+    bottom: 30%;
+    /* width: 100%; */
+    padding: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.ff>a{
+    color:white;
+    text-decoration: none;
+    line-height: 10px;
+    // letter-spacing: 0.8rem;
+}
+
+@media(max-width:767px){
+    .ff{
+        display: none;
+    }
+}
+
+// .btn-booking {
+
+//     width: 30px;
+//     line-height: 30px;
+//     color:white;
+//     // border-radius: 100%;
+//     // left:-25px;
+//     // top:-15px;
+//     font-size: 1rem;
+//     // 下方正中間
+//     // bottom:-25px;
+//     // left:50%;
+//     // margin-left: -25px;
+
+//     height: 120px;
+//     // width: 100px;
+//     background-color: rgb(25, 205, 225);
+//     // border-radius: 100%;
+//     position: relative;
+//     position: fixed;
+//     right: 0px;
+//     top: 350px;
+//     // transition: all 1s;
+
+//     border-top-left-radius: 1em 1em;
+//     border-bottom-left-radius: 1em 1em;
+
+//     // text-align: center;
+//     // justify-content: center;
+//     // align-items: center;
+// }
+
+// // .booking{
+// // width: 100%;
+// // }
+
+// .btn-booking:hover {
+//     right: 0;
+//     background-color:rgb(185, 58, 33);
+// }
+
+// .bowrap{
+//     display: flex;
+//     flex-wrap: wrap;
+// }

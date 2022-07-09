@@ -248,7 +248,7 @@ header>.container>.row {
 
 /* ////////////news  0-1 ///////// */
 .news {
-  background-color: #b93a21;
+  background-color: #231815;
   width: auto;
   height: auto;
 }
@@ -1671,4 +1671,49 @@ label {
 .modal-wrapper > .modal-content p {
   padding-bottom: 15px;
   line-height: 1.5rem;
+}
+
+.modal-wrapper h1 {
+  font-weight: normal;
+  text-shadow: 2px 2px 3px #cbc8c8;
+  line-height: 1.5em;
+}
+
+.icon-new {
+  position: absolute;
+  width: 50px;
+  line-height: 50px;
+  color: white;
+  border-radius: 100%;
+  left: -25px;
+  top: -15px;
+  font-size: 1rem;
+  background-color: #4a855e;
+}
+
+section {
+  position: relative;
+}
+
+.ff {
+  background-color: #b93a21;
+  position: fixed;
+  right: 10px;
+  bottom: 30%;
+  /* width: 100%; */
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ff > a {
+  color: white;
+  text-decoration: none;
+  line-height: 10px;
+}
+
+@media (max-width: 767px) {
+  .ff {
+    display: none;
+  }
 }
