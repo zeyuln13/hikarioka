@@ -210,7 +210,7 @@ header>.container>.row {
   .nav-menu {
     position: fixed;
     left: -120%;
-    top: 85px;
+    top: 90px;
     gap: 0;
     flex-direction: column;
     background-color: #f0f0f0;
@@ -221,12 +221,17 @@ header>.container>.row {
   }
 
   .nav-item {
-    margin: 16px 0;
+    margin: 16px;
+  }
+
+  .navbar {
+    width: 100%;
   }
 
   .nav-menu.active {
     left: 0;
   }
+  
 }
 /* ////////////bread A-1 /////////// */
 .bread-crumb {
@@ -467,6 +472,7 @@ h1 {
 footer {
   height: auto;
   width: auto;
+  background-color:white;
 }
 
 .footer-info {
